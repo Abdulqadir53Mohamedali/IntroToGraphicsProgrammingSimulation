@@ -7,20 +7,20 @@
       "RelativeMoniker": "D:0:0:{D6C5FE8B-607A-4F9E-AA30-22CDA9B6EFBB}|HelloGL\\HelloGL.vcxproj|solutionrelative:HelloGL\\HelloGL.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D6C5FE8B-607A-4F9E-AA30-22CDA9B6EFBB}|HelloGL\\HelloGL.vcxproj|C:\\GitHub\\IntroToGraphicsProgrammingSimulation\\HelloGL\\HelloGL\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{D6C5FE8B-607A-4F9E-AA30-22CDA9B6EFBB}|HelloGL\\HelloGL.vcxproj|solutionrelative:HelloGL\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{D6C5FE8B-607A-4F9E-AA30-22CDA9B6EFBB}|HelloGL\\HelloGL.vcxproj|C:\\GitHub\\IntroToGraphicsProgrammingSimulation\\HelloGL\\HelloGL\\GLUTCallbacks.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{D6C5FE8B-607A-4F9E-AA30-22CDA9B6EFBB}|HelloGL\\HelloGL.vcxproj|solutionrelative:HelloGL\\GLUTCallbacks.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D6C5FE8B-607A-4F9E-AA30-22CDA9B6EFBB}|HelloGL\\HelloGL.vcxproj|C:\\GitHub\\IntroToGraphicsProgrammingSimulation\\HelloGL\\HelloGL\\HelloGL.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D6C5FE8B-607A-4F9E-AA30-22CDA9B6EFBB}|HelloGL\\HelloGL.vcxproj|solutionrelative:HelloGL\\HelloGL.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D6C5FE8B-607A-4F9E-AA30-22CDA9B6EFBB}|HelloGL\\HelloGL.vcxproj|C:\\GitHub\\IntroToGraphicsProgrammingSimulation\\HelloGL\\HelloGL\\GLUTCallbacks.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{D6C5FE8B-607A-4F9E-AA30-22CDA9B6EFBB}|HelloGL\\HelloGL.vcxproj|solutionrelative:HelloGL\\GLUTCallbacks.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D6C5FE8B-607A-4F9E-AA30-22CDA9B6EFBB}|HelloGL\\HelloGL.vcxproj|C:\\GitHub\\IntroToGraphicsProgrammingSimulation\\HelloGL\\HelloGL\\HelloGL.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{D6C5FE8B-607A-4F9E-AA30-22CDA9B6EFBB}|HelloGL\\HelloGL.vcxproj|solutionrelative:HelloGL\\HelloGL.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{D6C5FE8B-607A-4F9E-AA30-22CDA9B6EFBB}|HelloGL\\HelloGL.vcxproj|C:\\GitHub\\IntroToGraphicsProgrammingSimulation\\HelloGL\\HelloGL\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D6C5FE8B-607A-4F9E-AA30-22CDA9B6EFBB}|HelloGL\\HelloGL.vcxproj|solutionrelative:HelloGL\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,13 +34,13 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "GLUTCallbacks.cpp",
               "DocumentMoniker": "C:\\GitHub\\IntroToGraphicsProgrammingSimulation\\HelloGL\\HelloGL\\GLUTCallbacks.cpp",
               "RelativeDocumentMoniker": "HelloGL\\GLUTCallbacks.cpp",
               "ToolTip": "C:\\GitHub\\IntroToGraphicsProgrammingSimulation\\HelloGL\\HelloGL\\GLUTCallbacks.cpp",
               "RelativeToolTip": "HelloGL\\GLUTCallbacks.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-03-06T15:42:05.798Z"
             },
@@ -52,7 +52,7 @@
               "RelativeDocumentMoniker": "HelloGL\\GLUTCallbacks.h",
               "ToolTip": "C:\\GitHub\\IntroToGraphicsProgrammingSimulation\\HelloGL\\HelloGL\\GLUTCallbacks.h",
               "RelativeToolTip": "HelloGL\\GLUTCallbacks.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAQAAAA",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-03-06T15:41:40.505Z"
             },
@@ -64,32 +64,32 @@
               "RelativeDocumentMoniker": "HelloGL\\HelloGL.cpp",
               "ToolTip": "C:\\GitHub\\IntroToGraphicsProgrammingSimulation\\HelloGL\\HelloGL\\HelloGL.cpp",
               "RelativeToolTip": "HelloGL\\HelloGL.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAcAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-03-06T15:19:33.878Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "main.cpp",
               "DocumentMoniker": "C:\\GitHub\\IntroToGraphicsProgrammingSimulation\\HelloGL\\HelloGL\\main.cpp",
               "RelativeDocumentMoniker": "HelloGL\\main.cpp",
               "ToolTip": "C:\\GitHub\\IntroToGraphicsProgrammingSimulation\\HelloGL\\HelloGL\\main.cpp",
               "RelativeToolTip": "HelloGL\\main.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAAAAAA",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-03-06T15:10:13.501Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "HelloGL.h",
               "DocumentMoniker": "C:\\GitHub\\IntroToGraphicsProgrammingSimulation\\HelloGL\\HelloGL\\HelloGL.h",
               "RelativeDocumentMoniker": "HelloGL\\HelloGL.h",
               "ToolTip": "C:\\GitHub\\IntroToGraphicsProgrammingSimulation\\HelloGL\\HelloGL\\HelloGL.h",
               "RelativeToolTip": "HelloGL\\HelloGL.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAUAAAA",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-03-06T15:09:09.135Z"
             }

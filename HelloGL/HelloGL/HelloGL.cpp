@@ -17,7 +17,7 @@ void HelloGL::Display() {
 		glVertex2f(-0.75, 0.5);
 		glVertex2f(0.75, 0.5);
 		glVertex2f(0.75, -0.5);
-		//glVertex2f(-0.75, -0.5);
+		glVertex2f(-0.75, -0.5);
 		glEnd();
 	glFlush();
 
