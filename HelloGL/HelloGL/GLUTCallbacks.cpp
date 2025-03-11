@@ -23,5 +23,8 @@ namespace GLUTCallbacks {
 			helloGL->DrawPentagon();
 		}
 	}
+	void Timer(int preferredRefresh) {
+		helloGL->Update();
+	}
 }
 //GLUTCallbacks::Init(this);

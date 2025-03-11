@@ -5,4 +5,5 @@ namespace GLUTCallbacks {
 	void Init(HelloGL* gl);
 	void Display();
 	void DrawPentagon();
+	void Timer(int preferredRefresh);
 }

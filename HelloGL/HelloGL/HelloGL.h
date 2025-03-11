@@ -13,6 +13,7 @@ public:
 	HelloGL(int argc, char* argv[]);
 	void Display();
 	void DrawPentagon();
+	void Update();
 	~HelloGL(void);
 	
 };

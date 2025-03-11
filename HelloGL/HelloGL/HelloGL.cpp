@@ -87,6 +87,12 @@ void HelloGL::DrawPentagon() {
 
 }
 
+void HelloGL::Update() {
+
+    glutPostRedisplay();// causes scene to redraw itself after the update has finished
+
+}
+
 HelloGL::~HelloGL(void) {
 
 }
