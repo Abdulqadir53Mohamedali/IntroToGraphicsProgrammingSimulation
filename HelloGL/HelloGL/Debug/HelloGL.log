@@ -2,4 +2,4 @@
   HelloGL.cpp
   main.cpp
   Generating Code...
-LINK : fatal error LNK1104: cannot open file 'freeglut.lib'
+  HelloGL.vcxproj -> C:\Users\m013970o\Documents\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\Debug\HelloGL.exe

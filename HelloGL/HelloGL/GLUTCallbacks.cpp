@@ -17,7 +17,13 @@ namespace GLUTCallbacks {
 		if (helloGL != nullptr) {
 			helloGL->Display();
 		}
-	}	
+	}		
+	void DisplayTriangles() {
+		if (helloGL != nullptr) {
+			helloGL->Display();
+		}
+	}
+	
 	void DrawPentagon() {
 		if (helloGL != nullptr) {
 			helloGL->DrawPentagon();
@@ -25,6 +31,7 @@ namespace GLUTCallbacks {
 	}
 	void Timer(int preferredRefresh) {
 		helloGL->Update();
+		glutTimerFunc(preferredRefresh, GLUTCallbacks::Timer, preferredRefresh);
 	}
 }
 //GLUTCallbacks::Init(this);
