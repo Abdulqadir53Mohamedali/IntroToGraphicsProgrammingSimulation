@@ -12,12 +12,17 @@ class HelloGL
 {
 
 private:
+	float rotationTraingle;
+	float rotationRect;
 	float rotation;
 public:
 
 	HelloGL(int argc, char* argv[]);
 	void Display();
 	void DisplayTriangles();
+	void DrawTriangle();
+	void DrawRectangle();
+	void DrawSqaure();
 	void DrawPentagon();
 	void Update();
 	~HelloGL(void);

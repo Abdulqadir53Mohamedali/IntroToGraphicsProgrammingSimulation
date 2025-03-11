@@ -1,5 +1,10 @@
-﻿  GLUTCallbacks.cpp
-  HelloGL.cpp
-  main.cpp
-  Generating Code...
-  HelloGL.vcxproj -> C:\Users\m013970o\Documents\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\Debug\HelloGL.exe
+﻿  HelloGL.cpp
+C:\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\HelloGL\HelloGL.cpp(111,22): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\HelloGL\HelloGL.cpp(111,16): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\HelloGL\HelloGL.cpp(112,21): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\HelloGL\HelloGL.cpp(112,16): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\HelloGL\HelloGL.cpp(113,21): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\HelloGL\HelloGL.cpp(113,16): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\HelloGL\HelloGL.cpp(114,22): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\HelloGL\HelloGL.cpp(114,16): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+  HelloGL.vcxproj -> C:\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\Debug\HelloGL.exe
