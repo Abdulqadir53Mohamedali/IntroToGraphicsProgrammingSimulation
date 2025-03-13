@@ -46,8 +46,7 @@
               "RelativeToolTip": "HelloGL\\GLUTCallbacks.cpp",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAuAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-03-06T15:42:05.798Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-06T15:42:05.798Z"
             },
             {
               "$type": "Document",
@@ -59,8 +58,7 @@
               "RelativeToolTip": "HelloGL\\GLUTCallbacks.h",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAuAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-03-06T15:41:40.505Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-06T15:41:40.505Z"
             },
             {
               "$type": "Document",
@@ -70,7 +68,7 @@
               "RelativeDocumentMoniker": "HelloGL\\HelloGL.cpp",
               "ToolTip": "C:\\Users\\m013970o\\Documents\\GitHub\\IntroToGraphicsProgrammingSimulation\\HelloGL\\HelloGL\\HelloGL.cpp",
               "RelativeToolTip": "HelloGL\\HelloGL.cpp",
-              "ViewState": "AQIAAI4AAAAAAAAAAAAAAJkAAAAdAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-03-06T15:19:33.878Z",
               "EditorCaption": ""
@@ -85,8 +83,7 @@
               "RelativeToolTip": "HelloGL\\main.cpp",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-03-06T15:10:13.501Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-06T15:10:13.501Z"
             },
             {
               "$type": "Document",
@@ -98,8 +95,7 @@
               "RelativeToolTip": "HelloGL\\HelloGL.h",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAwAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-03-06T15:09:09.135Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-06T15:09:09.135Z"
             }
           ]
         }
