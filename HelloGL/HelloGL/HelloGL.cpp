@@ -38,7 +38,7 @@ void HelloGL::Display()
 
     glPopMatrix();
 
-    glFlush(); // flushes the sene drawn to the grpahics card
+    glFlush(); 
 
 }
  
@@ -153,7 +153,7 @@ void HelloGL::Update() {
 
     rotationRect += 4.0f;   // Rectangle rotates fast
     rotation += 1.0f; // Square rotates medium speed
-    rotationTraingle += 0.25f; // Triangle rotates at slow slower
+    rotationTraingle += 0.25f; // Triangle rotates slowly 
 
     if (rotation >= 360.0f) {
         rotation = 0.0f;
