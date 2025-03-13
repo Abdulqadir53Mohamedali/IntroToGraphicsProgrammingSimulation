@@ -24,6 +24,7 @@ public:
 	void DrawRectangle();
 	void DrawSqaure();
 	void DrawPentagon();
+	void Keyboard(unsigned char key, int x, int y);
 	void Update();
 	~HelloGL(void);
 	

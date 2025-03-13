@@ -10,9 +10,12 @@ HelloGL::HelloGL(int argc, char* argv[])
 	GLUTCallbacks::Init(this);
 
  	glutInit(&argc, argv);
+    glutInitDisplayMode(GLUT_DOUBLE);
 	glutInitWindowSize(800, 800);
 	glutCreateWindow("Simple OpenGL Program");
 	glutDisplayFunc(GLUTCallbacks::Display);
+    glutKeyboardFunc(GLUTCallbacks::Keyboard);
+
     glutTimerFunc(REFRESHRATE, GLUTCallbacks::Timer, REFRESHRATE); // How long timer should wait before calling method | Method that should be called upon this  || Parameter passwed in to timer function
 
 
@@ -23,7 +26,7 @@ void HelloGL::Display()
 {
     glClear(GL_COLOR_BUFFER_BIT);
 
-    glPushMatrix();
+    /*glPushMatrix();
     this->DrawRectangle();
 
     glPopMatrix();
@@ -31,7 +34,7 @@ void HelloGL::Display()
     glPushMatrix();
     this->DrawSqaure();
 
-    glPopMatrix();
+    glPopMatrix();*/
 
     glPushMatrix();
     this->DrawTriangle();
@@ -39,6 +42,7 @@ void HelloGL::Display()
     glPopMatrix();
 
     glFlush(); 
+    glutSwapBuffers();
 
 }
  
@@ -145,15 +149,26 @@ void HelloGL::DrawPentagon() {
     glFlush();
 
 }
+void HelloGL::Keyboard(unsigned char key, int x, int y) {
+    if (key == 'd') {
+        rotationTraingle += 2.5f;
 
+    }if (key == 'a') {
+        rotationTraingle -= 2.0f;
+    }
+}
 
 
 void HelloGL::Update() {
 
 
-    rotationRect += 4.0f;   // Rectangle rotates fast
-    rotation += 1.0f; // Square rotates medium speed
-    rotationTraingle += 0.25f; // Triangle rotates slowly 
+    //rotationRect += 4.0f;   // Rectangle rotates fast
+    //rotation += 1.0f; // Square rotates medium speed
+    
+    //rotationTraingle += 0.5f; // Triangle rotates slowly 
+
+
+    //Sleep(10);
 
     if (rotation >= 360.0f) {
         rotation = 0.0f;
