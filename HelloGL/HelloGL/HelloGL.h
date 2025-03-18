@@ -7,6 +7,18 @@
 #define REFRESHRATE 16
 const int preferredRefresh = 16;
 
+struct Vector3 {
+ 
+	float x, y, z;
+};
+struct Camera{
+ 
+	Vector3 eye;
+	Vector3 center;
+	Vector3 up;
+};
+
+
 
 class HelloGL
 {
@@ -15,6 +27,7 @@ private:
 	float rotationTraingle;
 	float rotationRect;
 	float rotation;
+	Camera* camera;
 public:
 
 	HelloGL(int argc, char* argv[]);

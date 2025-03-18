@@ -6,6 +6,11 @@ HelloGL::HelloGL(int argc, char* argv[])
     rotation = 0.0f;
     rotationRect = 0.0f;
     rotationTraingle = 0.0f;
+    
+    camera = new Camera();
+    camera->eye.x = 0.0f; camera->eye.y = 0.0f; camera->eye.z = 1.0f;
+    camera->center.x = 0.0f; camera->center.y = 0.0f; camera->center.z = 0.0f;
+    camera->up.x = 0.0f; camera->up.y = 1.0f; camera->up.z = 0.0f;
 
 	GLUTCallbacks::Init(this);
 
@@ -17,7 +22,23 @@ HelloGL::HelloGL(int argc, char* argv[])
     glutKeyboardFunc(GLUTCallbacks::Keyboard);
 
     glutTimerFunc(REFRESHRATE, GLUTCallbacks::Timer, REFRESHRATE); // How long timer should wait before calling method | Method that should be called upon this  || Parameter passwed in to timer function
+    
+    // Changes matrix mode to projectin matrixs
+    glMatrixMode(GL_PROJECTION);
+    glLoadIdentity();
 
+    // Sets the viewport to be the entire window 
+    glViewport(0, 0, 800, 800);
+    
+    // Sets the correct perspective
+        // NOTE! 45 is the field of view,
+        // 1 is the aspect ratio (a square window)
+        // the next 1 is the front clipping plane. This can be set to zero, but this is not usually done. Note, anything a distance of 1 from the camera (between zero and 1) won’t be visible. You could set this to 0.5 for example?
+        // 1000 is the far clipping plane, nothing past 1000 units from the camera will be drawn
+    gluPerspective(45, 1, 0, 1000);
+
+    // Switches us back to the model view matrix
+    glMatrixMode(GL_MODELVIEW);
 
 	glutMainLoop();
 
@@ -25,21 +46,25 @@ HelloGL::HelloGL(int argc, char* argv[])
 void HelloGL::Display()
 {
     glClear(GL_COLOR_BUFFER_BIT);
-
-    /*glPushMatrix();
-    this->DrawRectangle();
-
+    glPushMatrix();
+    glRotatef(rotationTraingle, 1.0f, 0.0f, 0.0f);
+    glutWireTeapot(0.1);
     glPopMatrix();
 
-    glPushMatrix();
-    this->DrawSqaure();
+    ///*glPushMatrix();
+    //this->DrawRectangle();
 
-    glPopMatrix();*/
+    //glPopMatrix();
 
-    glPushMatrix();
-    this->DrawTriangle();
+    //glPushMatrix();
+    //this->DrawSqaure();
 
-    glPopMatrix();
+    //glPopMatrix();*/
+
+    //glPushMatrix();
+    //this->DrawTriangle();
+
+    //glPopMatrix();
 
     glFlush(); 
     glutSwapBuffers();
@@ -97,8 +122,8 @@ void DrawTriangles() {
 //glEnd();
 }
 void HelloGL::DrawTriangle() {
-    glTranslatef(0.6f, 0.0f, 0.0f);  // Move triangle to right
-    glRotatef(rotationTraingle, 0.0f, 0.0f, 1.0f);
+    glTranslatef(0.6f, 0.0f, -5.0f);  // Move triangle to right
+    glRotatef(rotationTraingle, 1.0f, 0.0f, 0.0f);
     glBegin(GL_TRIANGLES);
     glColor3f(0.0f, 0.0f, 1.0f);
     glVertex2f(-0.2f, -0.2f);
@@ -153,8 +178,21 @@ void HelloGL::Keyboard(unsigned char key, int x, int y) {
     if (key == 'd') {
         rotationTraingle += 2.5f;
 
+
     }if (key == 'a') {
         rotationTraingle -= 2.0f;
+    }if (key == 'z') {
+        camera->eye.z +=0.1f;
+
+    }if (key == 'q') {
+        camera->eye.z -=0.1f;
+
+    }if (key == 'e') {
+        camera->eye.y +=0.1f;
+
+    }if (key == 'u') {
+        camera->eye.y -=0.1f;
+
     }
 }
 
@@ -169,6 +207,10 @@ void HelloGL::Update() {
 
 
     //Sleep(10);
+
+    // Resets ModelViewMatric in every frame , so transfromations fromt he previous don't get included in the current one 
+    glLoadIdentity();
+    gluLookAt(camera->eye.x, camera->eye.y, camera->eye.z, camera->center.x, camera->center.y, camera->center.z, camera->up.x, camera->up.y, camera->up.z);
 
     if (rotation >= 360.0f) {
         rotation = 0.0f;
