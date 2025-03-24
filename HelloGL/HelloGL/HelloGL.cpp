@@ -117,7 +117,7 @@ HelloGL::HelloGL(int argc, char* argv[])
     glViewport(0, 0, 800, 800);
     
     // Sets the correct perspective
-        // NOTE! 45 is the field of view,
+        //  45 is the field of view,
         // 1 is the aspect ratio (a square window)
         // the next 1 is the front clipping plane. This can be set to zero, but this is not usually done. Note, anything a distance of 1 from the camera (between zero and 1) won’t be visible. You could set this to 0.5 for example?
         // 1000 is the far clipping plane, nothing past 1000 units from the camera will be drawn
@@ -136,7 +136,7 @@ void HelloGL::Display()
     glClear(GL_COLOR_BUFFER_BIT);
     glPushMatrix();
     glRotatef(rotationTraingle, 1.0f, 0.0f, 0.0f);
-    DrawCubeArray();
+    DrawIndexedCubeAlt();
     glPopMatrix();
 
     ///*glPushMatrix();
@@ -481,9 +481,39 @@ void HelloGL::DrawCubeArray() {
 void HelloGL::DrawIndexedCube() {
     glBegin(GL_TRIANGLES);
     for (int i = 0; i < 36; i++) {
-
+        glColor3f(colors[i].r, colors[i].g, colors[i].b);
+        glVertex3f(vertices[i].x, vertices[i].y, vertices[i].z);
     }
     glEnd();
+}
+void HelloGL::DrawCubeArrayAlt()
+{
+    glEnableClientState(GL_VERTEX_ARRAY);
+    glEnableClientState(GL_COLOR_ARRAY);
+    glVertexPointer(3, GL_FLOAT, 0, vertices);
+    glColorPointer(3, GL_FLOAT, 0, colors);
+
+    glPushMatrix();
+    glDrawArrays(GL_TRIANGLES, 0, 36);
+    glPopMatrix();
+
+    glDisableClientState(GL_COLOR_ARRAY);
+    glDisableClientState(GL_VERTEX_ARRAY);
+}
+
+void HelloGL::DrawIndexedCubeAlt()
+{
+    glEnableClientState(GL_VERTEX_ARRAY);
+    glEnableClientState(GL_COLOR_ARRAY);
+    glVertexPointer(3, GL_FLOAT, 0, indexedVertices);
+    glColorPointer(3, GL_FLOAT, 0, indexedColors);
+
+    glPushMatrix();
+    glDrawElements(GL_TRIANGLES, 36, GL_UNSIGNED_SHORT, indices);
+    glPopMatrix();
+
+    glDisableClientState(GL_COLOR_ARRAY);
+    glDisableClientState(GL_VERTEX_ARRAY);
 }
 
 void HelloGL::Update() {

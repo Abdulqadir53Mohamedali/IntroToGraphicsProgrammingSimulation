@@ -55,6 +55,9 @@ public:
 	void DrawPentagon();
 	void Keyboard(unsigned char key, int x, int y);
 	void Update();
+	void DrawCubeArrayAlt();
+
+	void DrawIndexedCubeAlt();
 	~HelloGL(void);
 	
 };

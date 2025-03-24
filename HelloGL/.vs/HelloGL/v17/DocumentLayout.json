@@ -40,9 +40,10 @@
               "RelativeDocumentMoniker": "HelloGL\\GLUTCallbacks.cpp",
               "ToolTip": "C:\\GitHub\\IntroToGraphicsProgrammingSimulation\\HelloGL\\HelloGL\\GLUTCallbacks.cpp",
               "RelativeToolTip": "HelloGL\\GLUTCallbacks.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAuAAAA",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-03-06T15:42:05.798Z"
+              "WhenOpened": "2025-03-06T15:42:05.798Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -52,9 +53,10 @@
               "RelativeDocumentMoniker": "HelloGL\\GLUTCallbacks.h",
               "ToolTip": "C:\\GitHub\\IntroToGraphicsProgrammingSimulation\\HelloGL\\HelloGL\\GLUTCallbacks.h",
               "RelativeToolTip": "HelloGL\\GLUTCallbacks.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAuAAAA",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-03-06T15:41:40.505Z"
+              "WhenOpened": "2025-03-06T15:41:40.505Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -64,7 +66,7 @@
               "RelativeDocumentMoniker": "HelloGL\\HelloGL.cpp",
               "ToolTip": "C:\\GitHub\\IntroToGraphicsProgrammingSimulation\\HelloGL\\HelloGL\\HelloGL.cpp",
               "RelativeToolTip": "HelloGL\\HelloGL.cpp",
-              "ViewState": "AgIAAIsAAAAAAAAAAAAAAOMBAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAJwAAAAAAAAAAAAAANUBAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-03-06T15:19:33.878Z",
               "EditorCaption": ""
@@ -89,7 +91,7 @@
               "RelativeDocumentMoniker": "HelloGL\\HelloGL.h",
               "ToolTip": "C:\\GitHub\\IntroToGraphicsProgrammingSimulation\\HelloGL\\HelloGL\\HelloGL.h",
               "RelativeToolTip": "HelloGL\\HelloGL.h",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAADIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAADoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-03-06T15:09:09.135Z",
               "EditorCaption": ""
