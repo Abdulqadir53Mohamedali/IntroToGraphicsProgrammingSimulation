@@ -1,10 +1,4 @@
 ﻿  HelloGL.cpp
-C:\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\HelloGL\HelloGL.cpp(229,22): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\HelloGL\HelloGL.cpp(229,16): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\HelloGL\HelloGL.cpp(230,21): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\HelloGL\HelloGL.cpp(230,16): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\HelloGL\HelloGL.cpp(231,21): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\HelloGL\HelloGL.cpp(231,16): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\HelloGL\HelloGL.cpp(232,22): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\HelloGL\HelloGL.cpp(232,16): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-  HelloGL.vcxproj -> C:\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\Debug\HelloGL.exe
+C:\Users\m013970o\Documents\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\HelloGL\HelloGL.cpp(25,15): error C2679: binary '=': no operator found which takes a right-hand operand of type 'Cube *' (or there is no acceptable conversion)
+  main.cpp
+  Generating Code...
