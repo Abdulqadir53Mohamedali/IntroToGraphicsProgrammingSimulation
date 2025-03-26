@@ -1,27 +1,2 @@
-﻿  Cube.cpp
-  GLUTCallbacks.cpp
-  HelloGL.cpp
-  main.cpp
-C:\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\HelloGL\HelloGL.cpp(25,15): error C2679: binary '=': no operator found which takes a right-hand operand of type 'Cube *' (or there is no acceptable conversion)
-      C:\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\HelloGL\Cube.h(26,1):
-      could be 'Cube &Cube::operator =(const Cube &)'
-          C:\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\HelloGL\HelloGL.cpp(25,15):
-          'Cube &Cube::operator =(const Cube &)': cannot convert argument 2 from 'Cube *' to 'const Cube &'
-              C:\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\HelloGL\HelloGL.cpp(25,28):
-              Reason: cannot convert from 'Cube *' to 'const Cube'
-              C:\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\HelloGL\HelloGL.cpp(25,28):
-              'Cube::Cube': no overloaded function could convert all the argument types
-                  C:\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\HelloGL\Cube.h(26,1):
-                  could be 'Cube::Cube(const Cube &)'
-                      C:\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\HelloGL\HelloGL.cpp(25,28):
-                      'Cube::Cube(const Cube &)': cannot convert argument 1 from 'Cube *' to 'const Cube &'
-                          C:\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\HelloGL\HelloGL.cpp(25,28):
-                          Reason: cannot convert from 'Cube *' to 'const Cube'
-                          C:\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\HelloGL\HelloGL.cpp(25,28):
-                          Conversion requires a second user-defined-conversion operator or constructor
-                  C:\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\HelloGL\HelloGL.cpp(25,28):
-                  while trying to match the argument list '(Cube *)'
-      C:\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\HelloGL\HelloGL.cpp(25,15):
-      while trying to match the argument list '(Cube, Cube *)'
-  
-  Generating Code...
+﻿  HelloGL.cpp
+  HelloGL.vcxproj -> C:\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\Debug\HelloGL.exe

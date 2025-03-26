@@ -18,7 +18,7 @@ private:
 	float rotationRect;
 	float rotation;
 	Camera* camera;
-	Cube* cube;
+	Cube* cube[200];
 
 
 
