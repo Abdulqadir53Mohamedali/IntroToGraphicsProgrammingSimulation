@@ -1,2 +1,6 @@
-﻿  HelloGL.cpp
-  HelloGL.vcxproj -> C:\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\Debug\HelloGL.exe
+﻿  Cube.cpp
+  GLUTCallbacks.cpp
+  HelloGL.cpp
+  main.cpp
+  Generating Code...
+  HelloGL.vcxproj -> C:\Users\m013970o\Documents\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\Debug\HelloGL.exe
