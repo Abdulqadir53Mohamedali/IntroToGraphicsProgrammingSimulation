@@ -78,18 +78,18 @@ bool Cube::Load(char* path) {
     inFile >> numVertices;
     indexedVertices = new Vertex[numVertices];
     for (int i = 0; i < numVertices; i++) {
-        inFile >> indexedVertices[i].x, indexedVertices[i].y, indexedVertices[i].z;
+        inFile >> indexedVertices[i].x>> indexedVertices[i].y>> indexedVertices[i].z;
     }  
     inFile >> numColors;
     indexedColors = new Color[numColors];
     for (int i = 0; i < numColors; i++) {
-        inFile >> indexedColors[i].r, indexedColors[i].g, indexedColors[i].b;
+        inFile >> indexedColors[i].r>> indexedColors[i].g>> indexedColors[i].b;
 
     }  
     inFile >> numIndicies;
     indices = new GLushort[numIndicies];
     for (int i = 0; i < numIndicies; i++) {
-        inFile >> numIndicies[i];
+        inFile >> indices[i];
 
     }
     inFile.close();
