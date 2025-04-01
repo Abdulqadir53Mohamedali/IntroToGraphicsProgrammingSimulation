@@ -1,4 +1,6 @@
 #include "HelloGL.h"
+#include "Pyramid.h"  // or a forward declaration if you prefer
+
 #include "GLUTCallbacks.h"
 
 
@@ -23,13 +25,20 @@ void HelloGL::InitObjects() {
     camera->center.x = 0.0f; camera->center.y = 0.0f; camera->center.z = 0.0f;
     camera->up.x = 0.0f; camera->up.y = 1.0f; camera->up.z = 0.0f;
 
-    Mesh* cubeMesh = MeshLoader::Load((char*)"pyramid.txt");
+    Mesh* cubeMesh = MeshLoader::Load((char*)"cube.txt");
+    Mesh* pyramidMesh = MeshLoader::Load((char*)"pyramid.txt");
 
-
-    for (int i = 0; i < 200; i++)
+    for (int i = 0; i < 500; i++)
     {
         objects[i] = new Cube(cubeMesh, ((rand() % 400) / 10.0f) - 20.0f, ((rand() % 200) / 10.0f) - 10.0f, -(rand() % 1000) / 10.0f);
 
+    }
+    for (int i = 500; i < 1000; i++)
+    {
+        objects[i] = new Pyramid(pyramidMesh,
+            ((rand() % 400) / 10.0f) - 20.0f,  // random x
+            ((rand() % 200) / 10.0f) - 10.0f,  // random y
+            -(rand() % 1000) / 10.0f);         // random z
     }
 }
 void HelloGL::InitGl(int argc, char* argv[]) {
@@ -69,7 +78,7 @@ void HelloGL::InitGl(int argc, char* argv[]) {
 void HelloGL::Display()
 {
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-    for (int i = 0; i < 200; i++)
+    for (int i = 0; i < 1000; i++)
     {
         objects[i]->Draw();
     }
@@ -118,7 +127,7 @@ void HelloGL::Update() {
     glLoadIdentity();
     gluLookAt(camera->eye.x, camera->eye.y, camera->eye.z, camera->center.x, camera->center.y, camera->center.z, camera->up.x, camera->up.y, camera->up.z);
     
-    for (int i = 0; i < 200; i++)
+    for (int i = 0; i < 1000; i++)
     {
         objects[i]->Update();
     }

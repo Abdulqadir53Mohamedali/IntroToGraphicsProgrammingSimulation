@@ -1,16 +1,10 @@
 ﻿  Cube.cpp
-C:\Users\m013970o\Documents\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\HelloGL\SceneObject.h(2,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-  GLUTCallbacks.cpp
-C:\Users\m013970o\Documents\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\HelloGL\SceneObject.h(2,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\HelloGL\SceneObject.h(2,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  (compiling source file 'Cube.cpp')
+  
   HelloGL.cpp
-C:\Users\m013970o\Documents\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\HelloGL\SceneObject.h(2,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-  main.cpp
-C:\Users\m013970o\Documents\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\HelloGL\SceneObject.h(2,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-  SceneObject.cpp
-C:\Users\m013970o\Documents\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\HelloGL\SceneObject.h(2,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\HelloGL\SceneObject.h(2,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  (compiling source file 'HelloGL.cpp')
+  
   Generating Code...
-Cube.obj : error LNK2019: unresolved external symbol "public: virtual __thiscall Cube::~Cube(void)" (??1Cube@@UAE@XZ) referenced in function "public: virtual void * __thiscall Cube::`scalar deleting destructor'(unsigned int)" (??_GCube@@UAEPAXI@Z)
-SceneObject.obj : error LNK2019: unresolved external symbol "public: virtual __thiscall SceneObject::~SceneObject(void)" (??1SceneObject@@UAE@XZ) referenced in function "public: virtual void * __thiscall SceneObject::`scalar deleting destructor'(unsigned int)" (??_GSceneObject@@UAEPAXI@Z)
-SceneObject.obj : error LNK2001: unresolved external symbol "public: virtual void __thiscall SceneObject::Update(void)" (?Update@SceneObject@@UAEXXZ)
-SceneObject.obj : error LNK2001: unresolved external symbol "public: virtual void __thiscall SceneObject::Draw(void)" (?Draw@SceneObject@@UAEXXZ)
-C:\Users\m013970o\Documents\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\Debug\HelloGL.exe : fatal error LNK1120: 4 unresolved externals
+  HelloGL.vcxproj -> C:\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\Debug\HelloGL.exe

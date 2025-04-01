@@ -99,3 +99,8 @@ void Cube::Update() {
     _rotation += 1.0;
 
 }
+
+// In Cube.cpp
+Cube::~Cube()
+{
+}
