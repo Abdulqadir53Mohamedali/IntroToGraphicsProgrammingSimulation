@@ -2,16 +2,19 @@
 #include "GLUTCallbacks.h"
 
 
-
-
-
-
 HelloGL::HelloGL(int argc, char* argv[]) 
 {/*
     rotation = 0.0f;
     rotationRect = 0.0f;
     rotationTraingle = 0.0f;*/
-    
+    InitGl(argc, argv);
+    InitObjects();
+
+	glutMainLoop();
+
+}
+
+void HelloGL::InitObjects() {
     camera = new Camera();
 
     //camera->eye.x = 5.0f; camera->eye.y = 5.0f; camera->eye.z = -5.0f;
@@ -20,30 +23,34 @@ HelloGL::HelloGL(int argc, char* argv[])
     camera->center.x = 0.0f; camera->center.y = 0.0f; camera->center.z = 0.0f;
     camera->up.x = 0.0f; camera->up.y = 1.0f; camera->up.z = 0.0f;
 
-    Cube::Load((char*)"cube.txt");
-    for (int i = 0; i < 200; i++) 
+    Mesh* cubeMesh = MeshLoader::Load((char*)"pyramid.txt");
+
+
+    for (int i = 0; i < 200; i++)
     {
-        cube[i] = new Cube (((rand() % 400) / 10.0f) - 20.0f, ((rand() % 200) / 10.0f) - 10.0f, -(rand() % 1000) / 10.0f);
+        objects[i] = new Cube(cubeMesh, ((rand() % 400) / 10.0f) - 20.0f, ((rand() % 200) / 10.0f) - 10.0f, -(rand() % 1000) / 10.0f);
 
     }
-	GLUTCallbacks::Init(this);
+}
+void HelloGL::InitGl(int argc, char* argv[]) {
+    GLUTCallbacks::Init(this);
 
- 	glutInit(&argc, argv);
+    glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_DOUBLE | GLUT_DEPTH);
-	glutInitWindowSize(800, 800);
-	glutCreateWindow("Simple OpenGL Program");
-	glutDisplayFunc(GLUTCallbacks::Display);
+    glutInitWindowSize(800, 800);
+    glutCreateWindow("Simple OpenGL Program");
+    glutDisplayFunc(GLUTCallbacks::Display);
     //glutKeyboardFunc(GLUTCallbacks::Keyboard);
 
     glutTimerFunc(REFRESHRATE, GLUTCallbacks::Timer, REFRESHRATE); // How long timer should wait before calling method | Method that should be called upon this  || Parameter passwed in to timer function
-    
+
     // Changes matrix mode to projectin matrixs
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
 
     // Sets the viewport to be the entire window 
     glViewport(0, 0, 800, 800);
-    
+
     // Sets the correct perspective
         //  45 is the field of view,
         // 1 is the aspect ratio (a square window)
@@ -57,15 +64,14 @@ HelloGL::HelloGL(int argc, char* argv[])
     glEnable(GL_DEPTH_TEST);
     glCullFace(GL_BACK);
 
-	glutMainLoop();
-
 }
+
 void HelloGL::Display()
 {
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     for (int i = 0; i < 200; i++)
     {
-        cube[i]->Draw();
+        objects[i]->Draw();
     }
     glFlush(); 
     glutSwapBuffers();
@@ -114,7 +120,7 @@ void HelloGL::Update() {
     
     for (int i = 0; i < 200; i++)
     {
-        cube[i]->Update();
+        objects[i]->Update();
     }
     //if (rotation >= 360.0f) {
     //    rotation = 0.0f;
