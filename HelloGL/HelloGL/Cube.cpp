@@ -4,7 +4,7 @@
 #include <fstream>
 
 
-Cube::Cube(Mesh* mesh,float x, float y, float z) : SceneObject(mesh){
+Cube::Cube(Mesh* mesh,Texture2D* texture, float x, float y, float z) : SceneObject(mesh){
     _rotation = 0.0;
     _position.x = x;
     _position.y = y;
@@ -57,7 +57,7 @@ void Cube::Draw()
         glColorPointer(3, GL_FLOAT, 0, _mesh->Colors);
 
         glPushMatrix();
-        glDrawElements(GL_TRIANGLES, 36, GL_UNSIGNED_SHORT, _mesh->Indicies);
+        glDrawElements(GL_TRIANGLES, _mesh->IndexCount, GL_UNSIGNED_SHORT, _mesh->Indicies);
         glPopMatrix();
 
         glDisableClientState(GL_COLOR_ARRAY);

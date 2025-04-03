@@ -21,9 +21,15 @@ struct Vertex {
 	GLfloat x, y, z;
 };
 
+struct TexCoord {
+	GLfloat u;
+	GLfloat v;
+};
 struct Mesh {
 	Vertex* Vertices;
 	Color* Colors;
 	GLushort* Indicies;
-	int VertexCount, ColorCount, IndexCount;
+	int TexCordCount, VertexCount, ColorCount, IndexCount;
+
+	TexCoord* TexCoords;
 };

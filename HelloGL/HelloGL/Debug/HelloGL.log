@@ -1,10 +1,17 @@
 ﻿  Cube.cpp
-C:\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\HelloGL\SceneObject.h(2,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-  (compiling source file 'Cube.cpp')
-  
+C:\Users\m013970o\Documents\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\HelloGL\SceneObject.h(2,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  GLUTCallbacks.cpp
+C:\Users\m013970o\Documents\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\HelloGL\SceneObject.h(2,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
   HelloGL.cpp
-C:\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\HelloGL\SceneObject.h(2,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-  (compiling source file 'HelloGL.cpp')
-  
+C:\Users\m013970o\Documents\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\HelloGL\SceneObject.h(2,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  main.cpp
+C:\Users\m013970o\Documents\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\HelloGL\SceneObject.h(2,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  MeshLoader.cpp
+C:\Users\m013970o\Documents\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\HelloGL\MeshLoader.cpp(15,2): error C2144: syntax error: 'void' should be preceded by ';'
+C:\Users\m013970o\Documents\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\HelloGL\MeshLoader.cpp(13,7): error C2182: 'LoadTexCoord': this use of 'void' is not valid
+  Pyramid.cpp
+C:\Users\m013970o\Documents\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\HelloGL\SceneObject.h(2,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  SceneObject.cpp
+C:\Users\m013970o\Documents\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\HelloGL\SceneObject.h(2,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  Texture2D.cpp
   Generating Code...
-  HelloGL.vcxproj -> C:\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\Debug\HelloGL.exe
