@@ -1,7 +1,8 @@
-C:\Users\m013970o\Documents\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\HelloGL\Cube.cpp;C:\Users\m013970o\Documents\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\HelloGL\Debug\Cube.obj
-C:\Users\m013970o\Documents\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\HelloGL\GLUTCallbacks.cpp;C:\Users\m013970o\Documents\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\HelloGL\Debug\GLUTCallbacks.obj
-C:\Users\m013970o\Documents\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\HelloGL\HelloGL.cpp;C:\Users\m013970o\Documents\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\HelloGL\Debug\HelloGL.obj
-C:\Users\m013970o\Documents\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\HelloGL\main.cpp;C:\Users\m013970o\Documents\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\HelloGL\Debug\main.obj
-C:\Users\m013970o\Documents\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\HelloGL\MeshLoader.cpp;C:\Users\m013970o\Documents\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\HelloGL\Debug\MeshLoader.obj
-C:\Users\m013970o\Documents\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\HelloGL\Pyramid.cpp;C:\Users\m013970o\Documents\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\HelloGL\Debug\Pyramid.obj
-C:\Users\m013970o\Documents\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\HelloGL\SceneObject.cpp;C:\Users\m013970o\Documents\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\HelloGL\Debug\SceneObject.obj
+C:\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\HelloGL\Cube.cpp;C:\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\HelloGL\Debug\Cube.obj
+C:\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\HelloGL\GLUTCallbacks.cpp;C:\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\HelloGL\Debug\GLUTCallbacks.obj
+C:\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\HelloGL\HelloGL.cpp;C:\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\HelloGL\Debug\HelloGL.obj
+C:\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\HelloGL\main.cpp;C:\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\HelloGL\Debug\main.obj
+C:\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\HelloGL\MeshLoader.cpp;C:\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\HelloGL\Debug\MeshLoader.obj
+C:\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\HelloGL\Pyramid.cpp;C:\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\HelloGL\Debug\Pyramid.obj
+C:\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\HelloGL\SceneObject.cpp;C:\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\HelloGL\Debug\SceneObject.obj
+C:\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\HelloGL\Texture2D.cpp;C:\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\HelloGL\Debug\Texture2D.obj

@@ -27,10 +27,12 @@ void HelloGL::InitObjects() {
 
     Mesh* cubeMesh = MeshLoader::Load((char*)"cube.txt");
     Mesh* pyramidMesh = MeshLoader::Load((char*)"pyramid.txt");
+    Texture2D* texture = new Texture2D();
+    texture->Load((char*)"Penguins.raw", 512, 512);
 
     for (int i = 0; i < 500; i++)
     {
-        objects[i] = new Cube(cubeMesh, ((rand() % 400) / 10.0f) - 20.0f, ((rand() % 200) / 10.0f) - 10.0f, -(rand() % 1000) / 10.0f);
+        objects[i] = new Cube(cubeMesh,texture, ((rand() % 400) / 10.0f) - 20.0f, ((rand() % 200) / 10.0f) - 10.0f, -(rand() % 1000) / 10.0f);
 
     }
     for (int i = 500; i < 1000; i++)
@@ -48,6 +50,7 @@ void HelloGL::InitGl(int argc, char* argv[]) {
     glutInitDisplayMode(GLUT_DOUBLE | GLUT_DEPTH);
     glutInitWindowSize(800, 800);
     glutCreateWindow("Simple OpenGL Program");
+    glEnable(GL_TEXTURE_2D);
     glutDisplayFunc(GLUTCallbacks::Display);
     //glutKeyboardFunc(GLUTCallbacks::Keyboard);
 
@@ -69,9 +72,13 @@ void HelloGL::InitGl(int argc, char* argv[]) {
 
     // Switches us back to the model view matrix
     glMatrixMode(GL_MODELVIEW);
+    glEnable(GL_TEXTURE_2D);
     glEnable(GL_CULL_FACE);
     glEnable(GL_DEPTH_TEST);
     glCullFace(GL_BACK);
+
+    glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+    glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
 
 }
 

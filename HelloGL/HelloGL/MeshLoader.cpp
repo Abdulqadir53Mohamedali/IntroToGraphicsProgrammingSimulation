@@ -83,6 +83,7 @@ namespace MeshLoader
 			cerr << "Can't open texture file " << path << endl;
 			return nullptr;
 		}
+		LoadTexCoord(inFile, *mesh);
 		LoadVertices(inFile,*mesh);
 		LoadColours(inFile, *mesh);
 		LoadIndices(inFile, *mesh);
