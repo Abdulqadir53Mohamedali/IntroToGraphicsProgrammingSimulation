@@ -88,21 +88,30 @@ void HelloGL::Display()
     for (int i = 0; i < 500; i++)
     {
         InitMaterial();
-        glMaterialfv(GL_FRONT, GL_AMBIENT, &(_material->Ambient.x));
-        glMaterialfv(GL_FRONT, GL_AMBIENT, &(_material->Ambient.y));
-        glMaterialfv(GL_FRONT, GL_AMBIENT, &(_material->Ambient.z));
-        glMaterialfv(GL_FRONT, GL_AMBIENT, &(_material->Ambient.w));
+        GLfloat amb[4] = {
+            _material->Ambient.x,
+            _material->Ambient.y,
+            _material->Ambient.z,
+            _material->Ambient.w
+        };
 
-        glMaterialfv(GL_FRONT, GL_DIFFUSE, &(_material->Diffuse.x));
-        glMaterialfv(GL_FRONT, GL_DIFFUSE, &(_material->Diffuse.y));
-        glMaterialfv(GL_FRONT, GL_DIFFUSE, &(_material->Diffuse.z));
-        glMaterialfv(GL_FRONT, GL_DIFFUSE, &(_material->Diffuse.w));
+        GLfloat dif[4] = {
+            _material->Diffuse.x,
+            _material->Diffuse.y,
+            _material->Diffuse.z,
+            _material->Diffuse.w
+        };
 
-        glMaterialfv(GL_FRONT, GL_SPECULAR, &(_material->Specular.x));
-        glMaterialfv(GL_FRONT, GL_SPECULAR, &(_material->Specular.y));
-        glMaterialfv(GL_FRONT, GL_SPECULAR, &(_material->Specular.z));
-        glMaterialfv(GL_FRONT, GL_SPECULAR, &(_material->Specular.w));
+        GLfloat spe[4] = {
+            _material->Specular.x,
+            _material->Specular.y,
+            _material->Specular.z,
+            _material->Specular.w
+        };
 
+        glMaterialfv(GL_FRONT, GL_AMBIENT, amb);
+        glMaterialfv(GL_FRONT, GL_DIFFUSE, dif);
+        glMaterialfv(GL_FRONT, GL_SPECULAR, spe);
         glMaterialf(GL_FRONT, GL_SHININESS, _material->Shininess);
 
         objects[i]->Draw();
@@ -197,25 +206,39 @@ void HelloGL::Update() {
 
 
 
-    glLightfv(GL_LIGHT0, GL_AMBIENT, &(_lightData->Ambient.x));
-    glLightfv(GL_LIGHT0, GL_AMBIENT, &(_lightData->Ambient.y));
-    glLightfv(GL_LIGHT0, GL_AMBIENT, &(_lightData->Ambient.z));
-    glLightfv(GL_LIGHT0, GL_AMBIENT, &(_lightData->Ambient.w));
+    GLfloat amb[4] = {
+        _lightData->Ambient.x,
+        _lightData->Ambient.y,
+        _lightData->Ambient.z,
+        _lightData->Ambient.w
+    };
 
-    glLightfv(GL_LIGHT0, GL_DIFFUSE, &(_lightData->Diffuse.x));
-    glLightfv(GL_LIGHT0, GL_DIFFUSE, &(_lightData->Diffuse.y));
-    glLightfv(GL_LIGHT0, GL_DIFFUSE, &(_lightData->Diffuse.z));
-    glLightfv(GL_LIGHT0, GL_DIFFUSE, &(_lightData->Diffuse.w));
+    GLfloat dif[4] = {
+        _lightData->Diffuse.x,
+        _lightData->Diffuse.y,
+        _lightData->Diffuse.z,
+        _lightData->Diffuse.w
+    };
 
-    glLightfv(GL_LIGHT0, GL_SPECULAR, &(_lightData->Specular.x));
-    glLightfv(GL_LIGHT0, GL_SPECULAR, &(_lightData->Specular.y));
-    glLightfv(GL_LIGHT0, GL_SPECULAR, &(_lightData->Specular.z));
-    glLightfv(GL_LIGHT0, GL_SPECULAR, &(_lightData->Specular.w));
+    GLfloat spe[4] = {
+        _lightData->Specular.x,
+        _lightData->Specular.y,
+        _lightData->Specular.z,
+        _lightData->Specular.w
+    };
 
-    glLightfv(GL_LIGHT0, GL_POSITION, &(_lightPosition->x));
-    glLightfv(GL_LIGHT0, GL_POSITION, &(_lightPosition->y));
-    glLightfv(GL_LIGHT0, GL_POSITION, &(_lightPosition->z));
-    glLightfv(GL_LIGHT0, GL_POSITION, &(_lightPosition->w));
+    GLfloat pos[4] = {
+        _lightPosition->x,
+        _lightPosition->y,
+        _lightPosition->z,
+        _lightPosition->w
+    };
+
+    // Set each property with a single call:
+    glLightfv(GL_LIGHT0, GL_AMBIENT, amb);
+    glLightfv(GL_LIGHT0, GL_DIFFUSE, dif);
+    glLightfv(GL_LIGHT0, GL_SPECULAR, spe);
+    glLightfv(GL_LIGHT0, GL_POSITION, pos);
 
     for (int i = 0; i < 500; i++)
     {
