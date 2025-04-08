@@ -8,7 +8,8 @@ using namespace std;
 namespace MeshLoader
 {
 	void LoadVertices(ifstream& inFile, Mesh& mesh);
-	void LoadColours(ifstream& inFile, Mesh& mesh);
+	void LoadNormals(ifstream& inFile, Mesh& mesh);
+	//void LoadColors(ifstream& inFile, Mesh& mesh);
 	void LoadIndices(ifstream& inFile, Mesh& mesh);
 	void LoadTexCoord(ifstream& inFile, Mesh& mesh);
 
@@ -29,7 +30,20 @@ namespace MeshLoader
 		}
 	}
 
-	void LoadColours(ifstream& inFile, Mesh& mesh)
+	void LoadNormals(ifstream& inFile, Mesh& mesh)
+	{
+
+		inFile >> mesh.NormalCount;
+
+		if (mesh.NormalCount > 0)
+		{
+			mesh.Normals = new Vector3[mesh.NormalCount];
+			for (int i = 0; i < mesh.NormalCount; i++) {
+				inFile >> mesh.Normals[i].x >> mesh.Normals[i].y >> mesh.Normals[i].z;
+
+			}
+		}
+	}/*	void LoadColours(ifstream& inFile, Mesh& mesh)
 	{
 
 		inFile >> mesh.ColorCount;
@@ -42,7 +56,7 @@ namespace MeshLoader
 
 			}
 		}
-	}
+	}*/
 	void LoadTexCoord(ifstream& inFile, Mesh& mesh) {
 		inFile >> mesh.TexCordCount;
 
@@ -83,9 +97,13 @@ namespace MeshLoader
 			cerr << "Can't open texture file " << path << endl;
 			return nullptr;
 		}
-		LoadTexCoord(inFile, *mesh);
 		LoadVertices(inFile,*mesh);
-		LoadColours(inFile, *mesh);
+		if (path == "cube.txt") {
+			LoadTexCoord(inFile, *mesh);
+
+		}
+		LoadNormals(inFile, *mesh);
+
 		LoadIndices(inFile, *mesh);
 		//LOAD DATA USING METHODS ABOVE
 		inFile.close();

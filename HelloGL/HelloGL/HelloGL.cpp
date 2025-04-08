@@ -9,8 +9,11 @@ HelloGL::HelloGL(int argc, char* argv[])
     rotation = 0.0f;
     rotationRect = 0.0f;
     rotationTraingle = 0.0f;*/
+
     InitGl(argc, argv);
+
     InitObjects();
+    InitLighting();
 
 	glutMainLoop();
 
@@ -26,7 +29,7 @@ void HelloGL::InitObjects() {
     camera->up.x = 0.0f; camera->up.y = 1.0f; camera->up.z = 0.0f;
 
     Mesh* cubeMesh = MeshLoader::Load((char*)"cube.txt");
-    Mesh* pyramidMesh = MeshLoader::Load((char*)"pyramid.txt");
+    //Mesh* pyramidMesh = MeshLoader::Load((char*)"pyramid.txt");
     Texture2D* texture = new Texture2D();
     texture->Load((char*)"Penguins.raw", 512, 512);
 
@@ -35,13 +38,7 @@ void HelloGL::InitObjects() {
         objects[i] = new Cube(cubeMesh,texture, ((rand() % 400) / 10.0f) - 20.0f, ((rand() % 200) / 10.0f) - 10.0f, -(rand() % 1000) / 10.0f);
 
     }
-    for (int i = 500; i < 1000; i++)
-    {
-        objects[i] = new Pyramid(pyramidMesh,
-            ((rand() % 400) / 10.0f) - 20.0f,  // random x
-            ((rand() % 200) / 10.0f) - 10.0f,  // random y
-            -(rand() % 1000) / 10.0f);         // random z
-    }
+
 }
 void HelloGL::InitGl(int argc, char* argv[]) {
     GLUTCallbacks::Init(this);
@@ -72,6 +69,9 @@ void HelloGL::InitGl(int argc, char* argv[]) {
 
     // Switches us back to the model view matrix
     glMatrixMode(GL_MODELVIEW);
+    
+    glEnable(GL_LIGHTING);
+    glEnable(GL_LIGHT0);
     glEnable(GL_TEXTURE_2D);
     glEnable(GL_CULL_FACE);
     glEnable(GL_DEPTH_TEST);
@@ -85,8 +85,26 @@ void HelloGL::InitGl(int argc, char* argv[]) {
 void HelloGL::Display()
 {
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-    for (int i = 0; i < 1000; i++)
+    for (int i = 0; i < 500; i++)
     {
+        InitMaterial();
+        glMaterialfv(GL_FRONT, GL_AMBIENT, &(_material->Ambient.x));
+        glMaterialfv(GL_FRONT, GL_AMBIENT, &(_material->Ambient.y));
+        glMaterialfv(GL_FRONT, GL_AMBIENT, &(_material->Ambient.z));
+        glMaterialfv(GL_FRONT, GL_AMBIENT, &(_material->Ambient.w));
+
+        glMaterialfv(GL_FRONT, GL_DIFFUSE, &(_material->Diffuse.x));
+        glMaterialfv(GL_FRONT, GL_DIFFUSE, &(_material->Diffuse.y));
+        glMaterialfv(GL_FRONT, GL_DIFFUSE, &(_material->Diffuse.z));
+        glMaterialfv(GL_FRONT, GL_DIFFUSE, &(_material->Diffuse.w));
+
+        glMaterialfv(GL_FRONT, GL_SPECULAR, &(_material->Specular.x));
+        glMaterialfv(GL_FRONT, GL_SPECULAR, &(_material->Specular.y));
+        glMaterialfv(GL_FRONT, GL_SPECULAR, &(_material->Specular.z));
+        glMaterialfv(GL_FRONT, GL_SPECULAR, &(_material->Specular.w));
+
+        glMaterialf(GL_FRONT, GL_SHININESS, _material->Shininess);
+
         objects[i]->Draw();
     }
     glFlush(); 
@@ -114,7 +132,50 @@ void HelloGL::Keyboard(unsigned char key, int x, int y) {
 
     }
 }
+void HelloGL::InitLighting(){
+    _lightPosition = new Vector4();
+    _lightPosition->x = 0.0;
+    _lightPosition->y = 0.0;
+    _lightPosition->z = 1.0;
+    _lightPosition->w = 0.0;
 
+    _lightData = new Lighting();
+    _lightData->Ambient.x = 0.2;
+    _lightData->Ambient.y = 0.2;
+    _lightData->Ambient.z = 0.2;
+    _lightData->Ambient.w = 1.0;
+
+    _lightData->Diffuse.x = 0.8;
+    _lightData->Diffuse.y = 0.8;
+    _lightData->Diffuse.z = 0.8;
+    _lightData->Diffuse.w = 1.0;
+
+    _lightData->Specular.x = 0.2;
+    _lightData->Specular.y = 0.2;
+    _lightData->Specular.z = 0.2;
+    _lightData->Specular.w = 1.0;
+}
+void HelloGL::InitMaterial() {
+    _material = new Material();
+
+    _material->Ambient.x = 0.8;
+    _material->Ambient.y = 0.05;
+    _material->Ambient.z = 0.05;
+    _material->Ambient.w = 1.0;
+
+    _material->Diffuse.x = 0.8;
+    _material->Diffuse.y = 0.05;
+    _material->Diffuse.z = 0.05;
+    _material->Diffuse.w = 1.0;
+
+    _material->Specular.x = 1.0;
+    _material->Specular.y = 1.0;
+    _material->Specular.z = 1.0;
+    _material->Specular.w = 1.0;
+
+    _material->Shininess = 100.0f;
+
+}
 
 
 
@@ -133,8 +194,30 @@ void HelloGL::Update() {
     // Resets ModelViewMatric in every frame , so transfromations fromt he previous don't get included in the current one 
     glLoadIdentity();
     gluLookAt(camera->eye.x, camera->eye.y, camera->eye.z, camera->center.x, camera->center.y, camera->center.z, camera->up.x, camera->up.y, camera->up.z);
-    
-    for (int i = 0; i < 1000; i++)
+
+
+
+    glLightfv(GL_LIGHT0, GL_AMBIENT, &(_lightData->Ambient.x));
+    glLightfv(GL_LIGHT0, GL_AMBIENT, &(_lightData->Ambient.y));
+    glLightfv(GL_LIGHT0, GL_AMBIENT, &(_lightData->Ambient.z));
+    glLightfv(GL_LIGHT0, GL_AMBIENT, &(_lightData->Ambient.w));
+
+    glLightfv(GL_LIGHT0, GL_DIFFUSE, &(_lightData->Diffuse.x));
+    glLightfv(GL_LIGHT0, GL_DIFFUSE, &(_lightData->Diffuse.y));
+    glLightfv(GL_LIGHT0, GL_DIFFUSE, &(_lightData->Diffuse.z));
+    glLightfv(GL_LIGHT0, GL_DIFFUSE, &(_lightData->Diffuse.w));
+
+    glLightfv(GL_LIGHT0, GL_SPECULAR, &(_lightData->Specular.x));
+    glLightfv(GL_LIGHT0, GL_SPECULAR, &(_lightData->Specular.y));
+    glLightfv(GL_LIGHT0, GL_SPECULAR, &(_lightData->Specular.z));
+    glLightfv(GL_LIGHT0, GL_SPECULAR, &(_lightData->Specular.w));
+
+    glLightfv(GL_LIGHT0, GL_POSITION, &(_lightPosition->x));
+    glLightfv(GL_LIGHT0, GL_POSITION, &(_lightPosition->y));
+    glLightfv(GL_LIGHT0, GL_POSITION, &(_lightPosition->z));
+    glLightfv(GL_LIGHT0, GL_POSITION, &(_lightPosition->w));
+
+    for (int i = 0; i < 500; i++)
     {
         objects[i]->Update();
     }

@@ -18,8 +18,13 @@ private:
 	float rotationTraingle;
 	float rotationRect;
 	float rotation;
+
+	Vector4* _lightPosition;
+	Material* _material;
+
+	Lighting* _lightData;
 	Camera* camera;
-	SceneObject* objects[1000];
+	SceneObject* objects[500];
 
 
 
@@ -27,6 +32,8 @@ public:
 
 	HelloGL(int argc, char* argv[]);
 	void InitObjects();
+	void InitLighting();
+	void InitMaterial();
 	void InitGl(int argc, char* argv[]);
 	void Display();
 	void Keyboard(unsigned char key, int x, int y);
