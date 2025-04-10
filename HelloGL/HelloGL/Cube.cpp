@@ -48,7 +48,7 @@ int Cube::numIndicies = 0;
 void Cube::Draw() 
 {
     if (_mesh->Vertices != nullptr && _mesh->Normals != nullptr && _mesh->Indicies != nullptr) {
-
+ 
         glPushMatrix();
 
         glTranslatef(_position.x, _position.y, _position.z);

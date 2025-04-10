@@ -84,7 +84,11 @@ void HelloGL::InitGl(int argc, char* argv[]) {
 
 void HelloGL::Display()
 {
+
+
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
+
     for (int i = 0; i < 500; i++)
     {
         InitMaterial();
@@ -116,6 +120,7 @@ void HelloGL::Display()
 
         objects[i]->Draw();
     }
+    Draw();
     glFlush(); 
     glutSwapBuffers();
 
@@ -184,6 +189,58 @@ void HelloGL::InitMaterial() {
 
     _material->Shininess = 100.0f;
 
+}
+void HelloGL::DrawString(const char* text, Vector3* position, Color*) {
+
+    
+    glPushMatrix();
+        glTranslatef(position->x, position->y, position->z);
+        glRasterPos2f(0.0f, 0.0f);
+    glutBitmapString(GLUT_BITMAP_TIMES_ROMAN_24, (unsigned char*)text);
+
+
+
+
+    glPopMatrix();
+}
+void HelloGL::Draw() {
+
+    glMatrixMode(GL_PROJECTION);
+    glPushMatrix();
+    glLoadIdentity();
+
+    // Use an orthographic projection matching your window size (800×800)
+    gluOrtho2D(0, 800, 0, 800);
+
+    // Switch to modelview to place text
+    glMatrixMode(GL_MODELVIEW);
+    glPushMatrix();
+    glLoadIdentity();
+
+    // Disable lighting so the text color is consistent
+    glDisable(GL_LIGHTING);
+    // If you don’t want text tinted by the texture environment:
+    glDisable(GL_TEXTURE_2D);
+
+    // 4) Set up the color you want for text (e.g. white or green)
+    glColor3f(0.0f, 1.0f, 0.0f);  // green text
+
+    // 5) Call your DrawString
+
+    Vector3 screenPos = { 500.0f, 750.0f, 0.0f };
+    DrawString("Text Attempt :)", &screenPos, nullptr);
+
+    // Re-enable things we turned off
+    glEnable(GL_TEXTURE_2D);
+    glEnable(GL_LIGHTING);
+
+    // Restore the modelview
+    glPopMatrix();
+
+    // Restore projection matrix
+    glMatrixMode(GL_PROJECTION);
+    glPopMatrix();
+    glMatrixMode(GL_MODELVIEW);
 }
 
 
