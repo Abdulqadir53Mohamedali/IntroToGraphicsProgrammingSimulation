@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\GitHub\\IntroToGraphicsProgrammingSimulation\\HelloGL\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{D6C5FE8B-607A-4F9E-AA30-22CDA9B6EFBB}|HelloGL\\HelloGL.vcxproj|C:\\GitHub\\IntroToGraphicsProgrammingSimulation\\HelloGL\\HelloGL\\HelloGL.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D6C5FE8B-607A-4F9E-AA30-22CDA9B6EFBB}|HelloGL\\HelloGL.vcxproj|solutionrelative:HelloGL\\HelloGL.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{D6C5FE8B-607A-4F9E-AA30-22CDA9B6EFBB}|HelloGL\\HelloGL.vcxproj|C:\\GitHub\\IntroToGraphicsProgrammingSimulation\\HelloGL\\HelloGL\\HelloGL.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{D6C5FE8B-607A-4F9E-AA30-22CDA9B6EFBB}|HelloGL\\HelloGL.vcxproj|solutionrelative:HelloGL\\HelloGL.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
@@ -39,10 +43,6 @@
       "RelativeMoniker": "D:0:0:{D6C5FE8B-607A-4F9E-AA30-22CDA9B6EFBB}|HelloGL\\HelloGL.vcxproj|solutionrelative:HelloGL\\MeshLoader.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D6C5FE8B-607A-4F9E-AA30-22CDA9B6EFBB}|HelloGL\\HelloGL.vcxproj|C:\\GitHub\\IntroToGraphicsProgrammingSimulation\\HelloGL\\HelloGL\\HelloGL.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{D6C5FE8B-607A-4F9E-AA30-22CDA9B6EFBB}|HelloGL\\HelloGL.vcxproj|solutionrelative:HelloGL\\HelloGL.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{D6C5FE8B-607A-4F9E-AA30-22CDA9B6EFBB}|HelloGL\\HelloGL.vcxproj|C:\\GitHub\\IntroToGraphicsProgrammingSimulation\\HelloGL\\HelloGL\\Pyramid.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{D6C5FE8B-607A-4F9E-AA30-22CDA9B6EFBB}|HelloGL\\HelloGL.vcxproj|solutionrelative:HelloGL\\Pyramid.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
@@ -74,17 +74,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 0,
               "Title": "HelloGL.h",
               "DocumentMoniker": "C:\\GitHub\\IntroToGraphicsProgrammingSimulation\\HelloGL\\HelloGL\\HelloGL.h",
               "RelativeDocumentMoniker": "HelloGL\\HelloGL.h",
               "ToolTip": "C:\\GitHub\\IntroToGraphicsProgrammingSimulation\\HelloGL\\HelloGL\\HelloGL.h",
               "RelativeToolTip": "HelloGL\\HelloGL.h",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAuwCwAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAuwCUAAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-04-08T12:54:26.119Z",
               "EditorCaption": ""
@@ -103,7 +103,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "HelloGL.cpp",
               "DocumentMoniker": "C:\\GitHub\\IntroToGraphicsProgrammingSimulation\\HelloGL\\HelloGL\\HelloGL.cpp",
               "RelativeDocumentMoniker": "HelloGL\\HelloGL.cpp",
@@ -116,7 +116,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Texture2D.cpp",
               "DocumentMoniker": "C:\\GitHub\\IntroToGraphicsProgrammingSimulation\\HelloGL\\HelloGL\\Texture2D.cpp",
               "RelativeDocumentMoniker": "HelloGL\\Texture2D.cpp",
@@ -124,8 +124,7 @@
               "RelativeToolTip": "HelloGL\\Texture2D.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-04-08T12:25:09.317Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-08T12:25:09.317Z"
             },
             {
               "$type": "Document",
@@ -141,7 +140,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "Cube.h",
               "DocumentMoniker": "C:\\GitHub\\IntroToGraphicsProgrammingSimulation\\HelloGL\\HelloGL\\Cube.h",
               "RelativeDocumentMoniker": "HelloGL\\Cube.h",
@@ -149,12 +148,11 @@
               "RelativeToolTip": "HelloGL\\Cube.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-03-25T13:11:07.104Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-25T13:11:07.104Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "SceneObject.h",
               "DocumentMoniker": "C:\\GitHub\\IntroToGraphicsProgrammingSimulation\\HelloGL\\HelloGL\\SceneObject.h",
               "RelativeDocumentMoniker": "HelloGL\\SceneObject.h",
@@ -162,12 +160,11 @@
               "RelativeToolTip": "HelloGL\\SceneObject.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-04-01T13:36:29.808Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-01T13:36:29.808Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "SceneObject.cpp",
               "DocumentMoniker": "C:\\GitHub\\IntroToGraphicsProgrammingSimulation\\HelloGL\\HelloGL\\SceneObject.cpp",
               "RelativeDocumentMoniker": "HelloGL\\SceneObject.cpp",
@@ -175,12 +172,11 @@
               "RelativeToolTip": "HelloGL\\SceneObject.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-04-07T17:45:57.576Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-07T17:45:57.576Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Cube.cpp",
               "DocumentMoniker": "C:\\GitHub\\IntroToGraphicsProgrammingSimulation\\HelloGL\\HelloGL\\Cube.cpp",
               "RelativeDocumentMoniker": "HelloGL\\Cube.cpp",
@@ -188,8 +184,7 @@
               "RelativeToolTip": "HelloGL\\Cube.cpp",
               "ViewState": "AgIAAEgAAAAAAAAAAAAuwHIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-03-25T13:15:06.166Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-25T13:15:06.166Z"
             },
             {
               "$type": "Document",
@@ -205,7 +200,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "MeshLoader.h",
               "DocumentMoniker": "C:\\GitHub\\IntroToGraphicsProgrammingSimulation\\HelloGL\\HelloGL\\MeshLoader.h",
               "RelativeDocumentMoniker": "HelloGL\\MeshLoader.h",
@@ -213,12 +208,11 @@
               "RelativeToolTip": "HelloGL\\MeshLoader.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-04-07T17:41:39.32Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-07T17:41:39.32Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "MeshLoader.cpp",
               "DocumentMoniker": "C:\\GitHub\\IntroToGraphicsProgrammingSimulation\\HelloGL\\HelloGL\\MeshLoader.cpp",
               "RelativeDocumentMoniker": "HelloGL\\MeshLoader.cpp",
@@ -226,12 +220,11 @@
               "RelativeToolTip": "HelloGL\\MeshLoader.cpp",
               "ViewState": "AgIAAEEAAAAAAAAAAAAmwG8AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-04-08T12:52:07.771Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-08T12:52:07.771Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "Structures.h",
               "DocumentMoniker": "C:\\GitHub\\IntroToGraphicsProgrammingSimulation\\HelloGL\\HelloGL\\Structures.h",
               "RelativeDocumentMoniker": "HelloGL\\Structures.h",
@@ -239,8 +232,7 @@
               "RelativeToolTip": "HelloGL\\Structures.h",
               "ViewState": "AgIAAAwAAAAAAAAAAAAuwDYAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-04-08T12:20:07.482Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-08T12:20:07.482Z"
             },
             {
               "$type": "Document",
@@ -252,8 +244,7 @@
               "RelativeToolTip": "HelloGL\\Pyramid.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-04-08T12:54:32.024Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-08T12:54:32.024Z"
             },
             {
               "$type": "Document",
@@ -265,8 +256,7 @@
               "RelativeToolTip": "HelloGL\\GLUTCallbacks.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-04-08T12:54:25.677Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-08T12:54:25.677Z"
             },
             {
               "$type": "Document",

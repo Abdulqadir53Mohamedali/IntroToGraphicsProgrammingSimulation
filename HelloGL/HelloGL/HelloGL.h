@@ -35,6 +35,7 @@ public:
 	void InitLighting();
 	void InitMaterial();
 	void InitGl(int argc, char* argv[]);
+	void DrawString(const char* text, Vector3* position, Color*);
 	void Display();
 	void Keyboard(unsigned char key, int x, int y);
 	void Update();
