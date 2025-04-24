@@ -1,6 +1,7 @@
 #pragma once
-#include "Structures.h";
-#include "Texture2D.h";
+#include "Structures.h"
+#include "Texture2D.h"
+
 
 class SceneObject
 {

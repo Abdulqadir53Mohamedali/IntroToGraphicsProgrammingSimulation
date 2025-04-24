@@ -4,8 +4,6 @@ class HelloGL;
 namespace GLUTCallbacks {
 	void Init(HelloGL* gl);
 	void Display();
-    void DisplayTriangles();
-	void DrawPentagon();
 	void Keyboard(unsigned char key, int x, int y);
 
 	void Timer(int preferredRefresh);
