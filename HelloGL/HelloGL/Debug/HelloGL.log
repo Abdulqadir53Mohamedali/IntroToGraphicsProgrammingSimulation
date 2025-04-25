@@ -1,10 +1,4 @@
 ﻿  HelloGL.cpp
-C:\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\HelloGL\SceneObject.h(2,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-  (compiling source file 'HelloGL.cpp')
-  
-C:\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\HelloGL\SceneObject.h(3,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-  (compiling source file 'HelloGL.cpp')
-  
 C:\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\HelloGL\HelloGL.cpp(157,29): warning C4305: '=': truncation from 'double' to 'float'
 C:\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\HelloGL\HelloGL.cpp(158,29): warning C4305: '=': truncation from 'double' to 'float'
 C:\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\HelloGL\HelloGL.cpp(159,29): warning C4305: '=': truncation from 'double' to 'float'

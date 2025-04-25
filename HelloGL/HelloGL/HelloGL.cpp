@@ -63,7 +63,7 @@ void HelloGL::InitGl(int argc, char* argv[]) {
     // Sets the correct perspective
         //  45 is the field of view,
         // 1 is the aspect ratio (a square window)
-        // the next 1 is the front clipping plane. This can be set to zero, but this is not usually done. Note, anything a distance of 1 from the camera (between zero and 1) won’t be visible. You could set this to 0.5 for example?
+        // the next 1 is the front clipping plane. This can be set to zero, but this is not usually done. Note, anything a distance of 1 from the camera (between zero and 1) won’t be visible
         // 1000 is the far clipping plane, nothing past 1000 units from the camera will be drawn
     gluPerspective(45, 1, 1, 1000);
 
@@ -209,7 +209,7 @@ void HelloGL::Draw() {
     glPushMatrix();
     glLoadIdentity();
 
-    // Use an orthographic projection matching your window size (800×800)
+    // Use an orthographic projection matching window size (800×800)
     gluOrtho2D(0, 800, 0, 800);
 
     // Switch to modelview to place text
@@ -219,13 +219,11 @@ void HelloGL::Draw() {
 
     // Disable lighting so the text color is consistent
     glDisable(GL_LIGHTING);
-    // If you don’t want text tinted by the texture environment:
+    // don’t want text tinted by the texture environment:
     glDisable(GL_TEXTURE_2D);
 
-    // 4) Set up the color you want for text (e.g. white or green)
     glColor3f(0.0f, 1.0f, 0.0f);  // green text
 
-    // 5) Call your DrawString
 
     Vector3 screenPos = { 500.0f, 750.0f, 0.0f };
     DrawString("Text Attempt :)", &screenPos, nullptr);
