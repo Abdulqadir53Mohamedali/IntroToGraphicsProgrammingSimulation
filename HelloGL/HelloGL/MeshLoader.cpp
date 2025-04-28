@@ -98,10 +98,10 @@ namespace MeshLoader
 			return nullptr;
 		}
 		LoadVertices(inFile,*mesh);
-		if (path == "cube.txt") {
+		//if (path == "cube.txt") {
 			LoadTexCoord(inFile, *mesh);
 
-		}
+		//}
 		LoadNormals(inFile, *mesh);
 
 		LoadIndices(inFile, *mesh);

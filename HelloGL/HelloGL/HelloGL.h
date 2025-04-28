@@ -24,7 +24,7 @@ private:
 
 	Lighting* _lightData;
 	Camera* camera;
-	SceneObject* objects[500];
+	SceneObject* objects[1000];
 
 
 

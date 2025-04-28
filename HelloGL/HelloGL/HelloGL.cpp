@@ -29,7 +29,7 @@ void HelloGL::InitObjects() {
     camera->up.x = 0.0f; camera->up.y = 1.0f; camera->up.z = 0.0f;
 
     Mesh* cubeMesh = MeshLoader::Load((char*)"cube.txt");
-    //Mesh* pyramidMesh = MeshLoader::Load((char*)"pyramid.txt");
+    Mesh* pyramidMesh = MeshLoader::Load((char*)"pyramid.txt");
     Texture2D* texture = new Texture2D();
     texture->Load((char*)"Penguins.raw", 512, 512);
 
@@ -38,6 +38,11 @@ void HelloGL::InitObjects() {
         objects[i] = new Cube(cubeMesh,texture, ((rand() % 400) / 10.0f) - 20.0f, ((rand() % 200) / 10.0f) - 10.0f, -(rand() % 1000) / 10.0f);
 
     }
+    for (int i = 500; i < 1000; i++)
+    {
+        objects[i] = new Pyramid(pyramidMesh, texture, ((rand() % 400) / 10.0f) - 20.0f, ((rand() % 200) / 10.0f) - 10.0f, -(rand() % 1000) / 10.0f);
+    }
+
 
 }
 void HelloGL::InitGl(int argc, char* argv[]) {
@@ -90,6 +95,38 @@ void HelloGL::Display()
 
 
     for (int i = 0; i < 500; i++)
+    {
+        InitMaterial();
+        GLfloat amb[4] = {
+            _material->Ambient.x,
+            _material->Ambient.y,
+            _material->Ambient.z,
+            _material->Ambient.w
+        };
+
+        GLfloat dif[4] = {
+            _material->Diffuse.x,
+            _material->Diffuse.y,
+            _material->Diffuse.z,
+            _material->Diffuse.w
+        };
+
+        GLfloat spe[4] = {
+            _material->Specular.x,
+            _material->Specular.y,
+            _material->Specular.z,
+            _material->Specular.w
+        };
+
+        glMaterialfv(GL_FRONT, GL_AMBIENT, amb);
+        glMaterialfv(GL_FRONT, GL_DIFFUSE, dif);
+        glMaterialfv(GL_FRONT, GL_SPECULAR, spe);
+        glMaterialf(GL_FRONT, GL_SHININESS, _material->Shininess);
+
+        objects[i]->Draw();
+    }    
+
+    for (int i = 500; i < 1000; i++)
     {
         InitMaterial();
         GLfloat amb[4] = {
@@ -209,15 +246,14 @@ void HelloGL::Draw() {
     glPushMatrix();
     glLoadIdentity();
 
-    // Use an orthographic projection matching window size (800×800)
     gluOrtho2D(0, 800, 0, 800);
 
-    // Switch to modelview to place text
+    // switching to mdoelview to place text
     glMatrixMode(GL_MODELVIEW);
     glPushMatrix();
     glLoadIdentity();
 
-    // Disable lighting so the text color is consistent
+    //  lighting disabled so the text colour is consistent
     glDisable(GL_LIGHTING);
     // don’t want text tinted by the texture environment:
     glDisable(GL_TEXTURE_2D);
@@ -228,7 +264,7 @@ void HelloGL::Draw() {
     Vector3 screenPos = { 500.0f, 750.0f, 0.0f };
     DrawString("Text Attempt :)", &screenPos, nullptr);
 
-    // Re-enable things we turned off
+    // Re-enable what was turned off
     glEnable(GL_TEXTURE_2D);
     glEnable(GL_LIGHTING);
 
@@ -296,6 +332,10 @@ void HelloGL::Update() {
     glLightfv(GL_LIGHT0, GL_POSITION, pos);
 
     for (int i = 0; i < 500; i++)
+    {
+        objects[i]->Update();
+    }    
+    for (int i = 500; i < 1000; i++)
     {
         objects[i]->Update();
     }
