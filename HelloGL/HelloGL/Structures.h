@@ -53,3 +53,9 @@ struct Mesh {
 
 	TexCoord* TexCoords;
 };
+
+//struct ObjectNode {
+//	SceneObject* object;// data 
+//	ObjectNode* next;
+//};
+

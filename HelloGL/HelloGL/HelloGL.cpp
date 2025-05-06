@@ -1,5 +1,6 @@
 #include "HelloGL.h"
-#include "Pyramid.h"  // or a forward declaration if you prefer
+#include "Pyramid.h"  
+#include "Monkey.h"  
 
 #include "GLUTCallbacks.h"
 
@@ -30,6 +31,8 @@ void HelloGL::InitObjects() {
 
     Mesh* cubeMesh = MeshLoader::Load((char*)"cube.txt");
     Mesh* pyramidMesh = MeshLoader::Load((char*)"pyramid.txt");
+    Mesh* MonkeyMesh = MeshLoader::Load((char*)"Monkey.txt");
+
     Texture2D* texture = new Texture2D();
     texture->Load((char*)"Penguins.raw", 512, 512);
 
@@ -38,9 +41,13 @@ void HelloGL::InitObjects() {
         objects[i] = new Cube(cubeMesh,texture, ((rand() % 400) / 10.0f) - 20.0f, ((rand() % 200) / 10.0f) - 10.0f, -(rand() % 1000) / 10.0f);
 
     }
-    for (int i = 500; i < 1000; i++)
+    for (int i = 500; i < 700; i++)
     {
         objects[i] = new Pyramid(pyramidMesh, texture, ((rand() % 400) / 10.0f) - 20.0f, ((rand() % 200) / 10.0f) - 10.0f, -(rand() % 1000) / 10.0f);
+    }    
+    for (int i = 700; i < 1000; i++)
+    {
+        objects[i] = new Monkey(MonkeyMesh, texture, ((rand() % 400) / 10.0f) - 20.0f, ((rand() % 200) / 10.0f) - 10.0f, -(rand() % 1000) / 10.0f);
     }
 
 
@@ -54,7 +61,7 @@ void HelloGL::InitGl(int argc, char* argv[]) {
     glutCreateWindow("Simple OpenGL Program");
     glEnable(GL_TEXTURE_2D);
     glutDisplayFunc(GLUTCallbacks::Display);
-    //glutKeyboardFunc(GLUTCallbacks::Keyboard);
+    glutKeyboardFunc(GLUTCallbacks::Keyboard);
 
     glutTimerFunc(REFRESHRATE, GLUTCallbacks::Timer, REFRESHRATE); // How long timer should wait before calling method | Method that should be called upon this  || Parameter passwed in to timer function
 
@@ -126,7 +133,38 @@ void HelloGL::Display()
         objects[i]->Draw();
     }    
 
-    for (int i = 500; i < 1000; i++)
+    for (int i = 500; i < 700; i++)
+    {
+        InitMaterial();
+        GLfloat amb[4] = {
+            _material->Ambient.x,
+            _material->Ambient.y,
+            _material->Ambient.z,
+            _material->Ambient.w
+        };
+
+        GLfloat dif[4] = {
+            _material->Diffuse.x,
+            _material->Diffuse.y,
+            _material->Diffuse.z,
+            _material->Diffuse.w
+        };
+
+        GLfloat spe[4] = {
+            _material->Specular.x,
+            _material->Specular.y,
+            _material->Specular.z,
+            _material->Specular.w
+        };
+
+        glMaterialfv(GL_FRONT, GL_AMBIENT, amb);
+        glMaterialfv(GL_FRONT, GL_DIFFUSE, dif);
+        glMaterialfv(GL_FRONT, GL_SPECULAR, spe);
+        glMaterialf(GL_FRONT, GL_SHININESS, _material->Shininess);
+
+        objects[i]->Draw();
+    }    
+    for (int i = 700; i < 1000; i++)
     {
         InitMaterial();
         GLfloat amb[4] = {
@@ -163,13 +201,18 @@ void HelloGL::Display()
 
 }
 void HelloGL::Keyboard(unsigned char key, int x, int y) {
-    if (key == 'd') {
-        rotationTraingle += 2.5f;
+    //if (key == 'd') {
+    //    rotationTraingle += 2.5f;
 
 
-    }if (key == 'a') {
-        rotationTraingle -= 2.0f;
-    }if (key == 'z') {
+    //}if (key == 'a') {
+    //    rotationTraingle -= 2.0f;    //if (key == 'd') {
+    //    rotationTraingle += 2.5f;
+
+
+    //}if (key == 'a') {
+    //    rotationTraingle -= 2.0f;
+    if (key == 'z') {
         camera->eye.z += 0.1f;
 
     }if (key == 'q') {
@@ -295,7 +338,7 @@ void HelloGL::Update() {
     glLoadIdentity();
     gluLookAt(camera->eye.x, camera->eye.y, camera->eye.z, camera->center.x, camera->center.y, camera->center.z, camera->up.x, camera->up.y, camera->up.z);
 
-
+    
 
     GLfloat amb[4] = {
         _lightData->Ambient.x,
@@ -335,7 +378,11 @@ void HelloGL::Update() {
     {
         objects[i]->Update();
     }    
-    for (int i = 500; i < 1000; i++)
+    for (int i = 500; i < 700; i++)
+    {
+        objects[i]->Update();
+    }  
+    for (int i = 700; i < 1000; i++)
     {
         objects[i]->Update();
     }

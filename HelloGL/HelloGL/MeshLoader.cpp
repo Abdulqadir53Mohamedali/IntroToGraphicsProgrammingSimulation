@@ -100,7 +100,11 @@ namespace MeshLoader
 		LoadVertices(inFile,*mesh);
 		//if (path == "cube.txt") {
 			LoadTexCoord(inFile, *mesh);
-
+		if (path == "Monkey.txt") {
+			LoadNormals(inFile, *mesh);
+			LoadTexCoord(inFile, *mesh);
+			LoadVertices(inFile, *mesh);
+		}
 		//}
 		LoadNormals(inFile, *mesh);
 
