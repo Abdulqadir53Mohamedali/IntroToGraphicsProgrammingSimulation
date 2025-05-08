@@ -11,14 +11,14 @@
 #define REFRESHRATE 16
 const int preferredRefresh = 16;
 
+/*<summary>
+
+
+<summary>*/
 class HelloGL
 {
 
 private:
-	float rotationTraingle;
-	float rotationRect;
-	float rotation;
-
 	Vector4* _lightPosition;
 	Material* _material;
 

@@ -4,6 +4,10 @@
 #include <gl/GLU.h>
 #include "GL\freeglut.h"
 
+/*<summary>
+
+
+<summary>*/
 struct Vector3 {
 
 	float x, y, z;

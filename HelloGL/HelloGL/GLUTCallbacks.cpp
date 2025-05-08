@@ -3,7 +3,10 @@
 #include "HelloGL.h"
 
 
+/*<summary>
 
+
+<summary>*/
 namespace GLUTCallbacks {
 	namespace{
 		HelloGL* helloGL = nullptr;
@@ -28,4 +31,3 @@ namespace GLUTCallbacks {
 		helloGL->Keyboard(key,x,y);
 	}
 }
-//GLUTCallbacks::Init(this);

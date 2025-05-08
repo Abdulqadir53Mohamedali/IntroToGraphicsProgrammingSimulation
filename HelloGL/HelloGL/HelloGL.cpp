@@ -1,15 +1,10 @@
 #include "HelloGL.h"
 #include "Pyramid.h"  
- 
-
 #include "GLUTCallbacks.h"
 
 
 HelloGL::HelloGL(int argc, char* argv[]) 
-{/*
-    rotation = 0.0f;
-    rotationRect = 0.0f;
-    rotationTraingle = 0.0f;*/
+{
 
     InitGl(argc, argv);
 
@@ -19,7 +14,10 @@ HelloGL::HelloGL(int argc, char* argv[])
 	glutMainLoop();
 
 }
+/*<summary>
+In this function we initialise / load the objects and texture as well as setting up the camera starting position
 
+<summary>*/
 void HelloGL::InitObjects() {
     camera = new Camera();
 
@@ -97,7 +95,7 @@ void HelloGL::Display()
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 
-    for (int i = 0; i < 500; i++)
+    for (int i = 0; i < 700; i++)
     {
         InitMaterial();
         GLfloat amb[4] = {
@@ -129,37 +127,37 @@ void HelloGL::Display()
         objects[i]->Draw();
     }    
 
-    for (int i = 500; i < 700; i++)
-    {
-        InitMaterial();
-        GLfloat amb[4] = {
-            _material->Ambient.x,
-            _material->Ambient.y,
-            _material->Ambient.z,
-            _material->Ambient.w
-        };
+    //for (int i = 500; i < 700; i++)
+    //{
+    //    InitMaterial();
+    //    GLfloat amb[4] = {
+    //        _material->Ambient.x,
+    //        _material->Ambient.y,
+    //        _material->Ambient.z,
+    //        _material->Ambient.w
+    //    };
 
-        GLfloat dif[4] = {
-            _material->Diffuse.x,
-            _material->Diffuse.y,
-            _material->Diffuse.z,
-            _material->Diffuse.w
-        };
+    //    GLfloat dif[4] = {
+    //        _material->Diffuse.x,
+    //        _material->Diffuse.y,
+    //        _material->Diffuse.z,
+    //        _material->Diffuse.w
+    //    };
 
-        GLfloat spe[4] = {
-            _material->Specular.x,
-            _material->Specular.y,
-            _material->Specular.z,
-            _material->Specular.w
-        };
+    //    GLfloat spe[4] = {
+    //        _material->Specular.x,
+    //        _material->Specular.y,
+    //        _material->Specular.z,
+    //        _material->Specular.w
+    //    };
 
-        glMaterialfv(GL_FRONT, GL_AMBIENT, amb);
+     /*   glMaterialfv(GL_FRONT, GL_AMBIENT, amb);
         glMaterialfv(GL_FRONT, GL_DIFFUSE, dif);
         glMaterialfv(GL_FRONT, GL_SPECULAR, spe);
         glMaterialf(GL_FRONT, GL_SHININESS, _material->Shininess);
 
         objects[i]->Draw();
-    }    
+    }    */
 
     Draw();
     glFlush(); 
@@ -167,17 +165,7 @@ void HelloGL::Display()
 
 }
 void HelloGL::Keyboard(unsigned char key, int x, int y) {
-    //if (key == 'd') {
-    //    rotationTraingle += 2.5f;
 
-
-    //}if (key == 'a') {
-    //    rotationTraingle -= 2.0f;    //if (key == 'd') {
-    //    rotationTraingle += 2.5f;
-
-
-    //}if (key == 'a') {
-    //    rotationTraingle -= 2.0f;
     if (key == 'z') {
         camera->eye.z += 0.1f;
 
@@ -189,6 +177,12 @@ void HelloGL::Keyboard(unsigned char key, int x, int y) {
 
     }if (key == 'u') {
         camera->eye.y -= 0.1f;
+
+    }if (key == 'p') {
+        camera->eye.x += 0.1f;
+
+    }if (key == 'm') {
+        camera->eye.x -= 0.1f;
 
     }
     if (key == 'a') {
@@ -248,6 +242,11 @@ void HelloGL::InitMaterial() {
     _material->Shininess = 100.0f;
 
 }
+
+/*<summary>
+This function is used to draw text to the scene
+
+<summary>*/
 void HelloGL::DrawString(const char* text, Vector3* position, Color*) {
 
     
@@ -261,6 +260,11 @@ void HelloGL::DrawString(const char* text, Vector3* position, Color*) {
 
     glPopMatrix();
 }
+
+/*<summary>
+
+
+<summary>*/
 void HelloGL::Draw() {
 
     glMatrixMode(GL_PROJECTION);
@@ -283,7 +287,7 @@ void HelloGL::Draw() {
 
 
     Vector3 screenPos = { 500.0f, 750.0f, 0.0f };
-    DrawString("500 cubes : 200 Pyramids", &screenPos, nullptr);
+    DrawString("500 cubes : 200 Pyramids\n Cubes:\n z & q : z-movement\n e & u : y-movement\n p & m : x-movement ", &screenPos, nullptr);
 
     // Re-enable what was turned off
     glEnable(GL_TEXTURE_2D);
@@ -300,18 +304,11 @@ void HelloGL::Draw() {
 
 
 
+/*<summary>
 
+
+<summary>*/
 void HelloGL::Update() {
-
-
-    //rotationRect += 4.0f;   // Rectangle rotates fast
-    //rotation += 1.0f; // Square rotates medium speed
-    
-    //rotationTraingle += 0.5f; // Triangle rotates slowly 
-
-
-    //Sleep(10);
-
     // Resets ModelViewMatric in every frame , so transfromations fromt he previous don't get included in the current one 
     glLoadIdentity();
     gluLookAt(camera->eye.x, camera->eye.y, camera->eye.z, camera->center.x, camera->center.y, camera->center.z, camera->up.x, camera->up.y, camera->up.z);
@@ -352,31 +349,21 @@ void HelloGL::Update() {
     glLightfv(GL_LIGHT0, GL_SPECULAR, spe);
     glLightfv(GL_LIGHT0, GL_POSITION, pos);
 
-    for (int i = 0; i < 500; i++)
+    for (int i = 0; i < 700; i++)
     {
         objects[i]->Update();
     }    
-    for (int i = 500; i < 700; i++)
-    {
-        objects[i]->Update();
-    }  
+    //for (int i = 500; i < 700; i++)
+    //{
+    //    objects[i]->Update();
+    //}  
 
-    //if (rotation >= 360.0f) {
-    //    rotation = 0.0f;
-    //}
-//    if (rotationRect >= 360.0f) 
-//    {
-//        rotationRect = 0.0f;
-//    }
-//    if (rotationTraingle >= 360.0f) 
-//    {
-//        rotationTraingle = 0.0f;
-//;   }
+
 
     glutPostRedisplay();// causes scene to redraw itself after the update has finishe
 
 }
 
 HelloGL::~HelloGL(void) {
-
+    delete camera;
 }

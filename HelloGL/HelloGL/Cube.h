@@ -5,10 +5,6 @@
 class Cube : public SceneObject
 {
 private :
-	//Vector3 _position;
-	//static  Vertex* indexedvertices;
-	//static  Color* indexedcolors;
-	//static GLushort* indices;
 	GLfloat _rotation;
 
 

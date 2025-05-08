@@ -1,17 +1,25 @@
-﻿  HelloGL.cpp
-C:\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\HelloGL\HelloGL.cpp(215,29): warning C4305: '=': truncation from 'double' to 'float'
-C:\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\HelloGL\HelloGL.cpp(216,29): warning C4305: '=': truncation from 'double' to 'float'
-C:\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\HelloGL\HelloGL.cpp(217,29): warning C4305: '=': truncation from 'double' to 'float'
-C:\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\HelloGL\HelloGL.cpp(220,29): warning C4305: '=': truncation from 'double' to 'float'
-C:\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\HelloGL\HelloGL.cpp(221,29): warning C4305: '=': truncation from 'double' to 'float'
-C:\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\HelloGL\HelloGL.cpp(222,29): warning C4305: '=': truncation from 'double' to 'float'
-C:\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\HelloGL\HelloGL.cpp(225,30): warning C4305: '=': truncation from 'double' to 'float'
-C:\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\HelloGL\HelloGL.cpp(226,30): warning C4305: '=': truncation from 'double' to 'float'
-C:\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\HelloGL\HelloGL.cpp(227,30): warning C4305: '=': truncation from 'double' to 'float'
-C:\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\HelloGL\HelloGL.cpp(233,28): warning C4305: '=': truncation from 'double' to 'float'
-C:\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\HelloGL\HelloGL.cpp(234,28): warning C4305: '=': truncation from 'double' to 'float'
-C:\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\HelloGL\HelloGL.cpp(235,28): warning C4305: '=': truncation from 'double' to 'float'
-C:\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\HelloGL\HelloGL.cpp(238,28): warning C4305: '=': truncation from 'double' to 'float'
-C:\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\HelloGL\HelloGL.cpp(239,28): warning C4305: '=': truncation from 'double' to 'float'
-C:\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\HelloGL\HelloGL.cpp(240,28): warning C4305: '=': truncation from 'double' to 'float'
-  HelloGL.vcxproj -> C:\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\Debug\HelloGL.exe
+﻿  Cube.cpp
+  GLUTCallbacks.cpp
+  HelloGL.cpp
+C:\Users\m013970o\Documents\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\HelloGL\HelloGL.cpp(209,29): warning C4305: '=': truncation from 'double' to 'float'
+C:\Users\m013970o\Documents\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\HelloGL\HelloGL.cpp(210,29): warning C4305: '=': truncation from 'double' to 'float'
+C:\Users\m013970o\Documents\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\HelloGL\HelloGL.cpp(211,29): warning C4305: '=': truncation from 'double' to 'float'
+C:\Users\m013970o\Documents\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\HelloGL\HelloGL.cpp(214,29): warning C4305: '=': truncation from 'double' to 'float'
+C:\Users\m013970o\Documents\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\HelloGL\HelloGL.cpp(215,29): warning C4305: '=': truncation from 'double' to 'float'
+C:\Users\m013970o\Documents\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\HelloGL\HelloGL.cpp(216,29): warning C4305: '=': truncation from 'double' to 'float'
+C:\Users\m013970o\Documents\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\HelloGL\HelloGL.cpp(219,30): warning C4305: '=': truncation from 'double' to 'float'
+C:\Users\m013970o\Documents\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\HelloGL\HelloGL.cpp(220,30): warning C4305: '=': truncation from 'double' to 'float'
+C:\Users\m013970o\Documents\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\HelloGL\HelloGL.cpp(221,30): warning C4305: '=': truncation from 'double' to 'float'
+C:\Users\m013970o\Documents\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\HelloGL\HelloGL.cpp(227,28): warning C4305: '=': truncation from 'double' to 'float'
+C:\Users\m013970o\Documents\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\HelloGL\HelloGL.cpp(228,28): warning C4305: '=': truncation from 'double' to 'float'
+C:\Users\m013970o\Documents\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\HelloGL\HelloGL.cpp(229,28): warning C4305: '=': truncation from 'double' to 'float'
+C:\Users\m013970o\Documents\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\HelloGL\HelloGL.cpp(232,28): warning C4305: '=': truncation from 'double' to 'float'
+C:\Users\m013970o\Documents\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\HelloGL\HelloGL.cpp(233,28): warning C4305: '=': truncation from 'double' to 'float'
+C:\Users\m013970o\Documents\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\HelloGL\HelloGL.cpp(234,28): warning C4305: '=': truncation from 'double' to 'float'
+  MeshLoader.cpp
+  Pyramid.cpp
+  SceneObject.cpp
+  Texture2D.cpp
+  main.cpp
+  Generating Code...
+  HelloGL.vcxproj -> C:\Users\m013970o\Documents\GitHub\IntroToGraphicsProgrammingSimulation\HelloGL\Debug\HelloGL.exe

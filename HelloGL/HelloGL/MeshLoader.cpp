@@ -5,6 +5,10 @@
 
 using namespace std;
 
+/*<summary>
+
+
+<summary>*/
 namespace MeshLoader
 {
 	void LoadVertices(ifstream& inFile, Mesh& mesh);

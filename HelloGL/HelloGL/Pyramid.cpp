@@ -18,7 +18,10 @@ void Pyramid::Update()
     _rotation += 1.0;
 
 }
+/*<summary>
 
+
+<summary>*/
 void Pyramid::Draw()
 {
     if (_mesh->Vertices != nullptr && _mesh->Normals != nullptr && _mesh->Indicies != nullptr) {

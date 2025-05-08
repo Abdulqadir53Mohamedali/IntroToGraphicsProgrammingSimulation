@@ -1,7 +1,10 @@
 #pragma once
 #include "Structures.h"
 
+/*<summary>
 
+
+<summary>*/
 class Texture2D
 {
 
