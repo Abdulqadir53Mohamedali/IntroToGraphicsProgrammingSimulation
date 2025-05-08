@@ -1,6 +1,6 @@
 #include "HelloGL.h"
 #include "Pyramid.h"  
-#include "Monkey.h"  
+ 
 
 #include "GLUTCallbacks.h"
 
@@ -31,7 +31,6 @@ void HelloGL::InitObjects() {
 
     Mesh* cubeMesh = MeshLoader::Load((char*)"cube.txt");
     Mesh* pyramidMesh = MeshLoader::Load((char*)"pyramid.txt");
-    Mesh* MonkeyMesh = MeshLoader::Load((char*)"Monkey.txt");
 
     Texture2D* texture = new Texture2D();
     texture->Load((char*)"Penguins.raw", 512, 512);
@@ -45,10 +44,7 @@ void HelloGL::InitObjects() {
     {
         objects[i] = new Pyramid(pyramidMesh, texture, ((rand() % 400) / 10.0f) - 20.0f, ((rand() % 200) / 10.0f) - 10.0f, -(rand() % 1000) / 10.0f);
     }    
-    for (int i = 700; i < 1000; i++)
-    {
-        objects[i] = new Monkey(MonkeyMesh, texture, ((rand() % 400) / 10.0f) - 20.0f, ((rand() % 200) / 10.0f) - 10.0f, -(rand() % 1000) / 10.0f);
-    }
+
 
 
 }
@@ -164,37 +160,7 @@ void HelloGL::Display()
 
         objects[i]->Draw();
     }    
-    for (int i = 700; i < 1000; i++)
-    {
-        InitMaterial();
-        GLfloat amb[4] = {
-            _material->Ambient.x,
-            _material->Ambient.y,
-            _material->Ambient.z,
-            _material->Ambient.w
-        };
 
-        GLfloat dif[4] = {
-            _material->Diffuse.x,
-            _material->Diffuse.y,
-            _material->Diffuse.z,
-            _material->Diffuse.w
-        };
-
-        GLfloat spe[4] = {
-            _material->Specular.x,
-            _material->Specular.y,
-            _material->Specular.z,
-            _material->Specular.w
-        };
-
-        glMaterialfv(GL_FRONT, GL_AMBIENT, amb);
-        glMaterialfv(GL_FRONT, GL_DIFFUSE, dif);
-        glMaterialfv(GL_FRONT, GL_SPECULAR, spe);
-        glMaterialf(GL_FRONT, GL_SHININESS, _material->Shininess);
-
-        objects[i]->Draw();
-    }
     Draw();
     glFlush(); 
     glutSwapBuffers();
@@ -223,6 +189,18 @@ void HelloGL::Keyboard(unsigned char key, int x, int y) {
 
     }if (key == 'u') {
         camera->eye.y -= 0.1f;
+
+    }
+    if (key == 'a') {
+        for (int i = 0; i < 500;i++) {
+            objects[i]->_position.x += 0.1f;
+        }
+
+    }    
+    if (key == 'b') {
+        for (int i = 0; i < 500;i++) {
+            objects[i]->_position.x -= 0.1f;
+        }
 
     }
 }
@@ -291,7 +269,7 @@ void HelloGL::Draw() {
 
     gluOrtho2D(0, 800, 0, 800);
 
-    // switching to mdoelview to place text
+    // switch to mdoel view to place text
     glMatrixMode(GL_MODELVIEW);
     glPushMatrix();
     glLoadIdentity();
@@ -305,7 +283,7 @@ void HelloGL::Draw() {
 
 
     Vector3 screenPos = { 500.0f, 750.0f, 0.0f };
-    DrawString("Text Attempt :)", &screenPos, nullptr);
+    DrawString("500 cubes : 200 Pyramids", &screenPos, nullptr);
 
     // Re-enable what was turned off
     glEnable(GL_TEXTURE_2D);
@@ -368,7 +346,7 @@ void HelloGL::Update() {
         _lightPosition->w
     };
 
-    // Set each property with a single call:
+    // Sets each property with a single call
     glLightfv(GL_LIGHT0, GL_AMBIENT, amb);
     glLightfv(GL_LIGHT0, GL_DIFFUSE, dif);
     glLightfv(GL_LIGHT0, GL_SPECULAR, spe);
@@ -382,10 +360,7 @@ void HelloGL::Update() {
     {
         objects[i]->Update();
     }  
-    for (int i = 700; i < 1000; i++)
-    {
-        objects[i]->Update();
-    }
+
     //if (rotation >= 360.0f) {
     //    rotation = 0.0f;
     //}

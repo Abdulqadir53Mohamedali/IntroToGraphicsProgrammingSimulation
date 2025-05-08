@@ -97,15 +97,11 @@ namespace MeshLoader
 			cerr << "Can't open texture file " << path << endl;
 			return nullptr;
 		}
-		LoadVertices(inFile,*mesh);
-		//if (path == "cube.txt") {
-			LoadTexCoord(inFile, *mesh);
-		if (path == "Monkey.txt") {
-			LoadNormals(inFile, *mesh);
-			LoadTexCoord(inFile, *mesh);
-			LoadVertices(inFile, *mesh);
-		}
+
 		//}
+		LoadVertices(inFile, *mesh);
+		//if (path == "cube.txt") {
+		LoadTexCoord(inFile, *mesh);
 		LoadNormals(inFile, *mesh);
 
 		LoadIndices(inFile, *mesh);
